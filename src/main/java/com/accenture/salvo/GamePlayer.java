@@ -7,74 +7,77 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.*;
-import java.util.Date;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Entity
 public class GamePlayer {
-
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private Date joinDate;
 
-    public Date getJoinDate() {
-        return joinDate;
-    }
-
-    /*private GamePlayer gamePlayer;*/
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name ="player_id")
+    private Player player;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="player_id")
-    private Player players;
+    @JoinColumn(name = "game_id")
+    private Game game;
 
-    public void setPlayer (Player players){
-        this.players = players;
+    @OneToMany(mappedBy = "gamePlayer", fetch = FetchType.EAGER)
+    private Set<Ship> ships = new HashSet<>();
+
+    public GamePlayer(){}
+
+    public GamePlayer(Player player, Game game){
+        this.player = player;
+        this.game = game;
+        this.joinDate = new Date();
+    }
+
+    public void addShip(Ship ship){
+        ship.setGamePlayer(this);
+        ships.add(ship);
+    }
+
+    public void setJoinDate(Date joinDate) {
+        this.joinDate = joinDate;
     }
 
     public Player getPlayer(){
-        return players;
-    }
-
-    public Player getPlayers(){
-        return players;
-    }
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="game_id")
-    private Game games;
-
-    public void setGame (Game games){
-        this.games = games;
+        return this.player;
     }
 
     public Game getGame(){
-        return games;
+        return this.game;
     }
 
-    public Game getGames(){
-        return games;
+    public Long getId() {
+        return this.id;
     }
 
-
-    public GamePlayer(){ }
-
-    public GamePlayer(Game games, Player players, Date joinDate) {
-        this.games = games;
-        this.players = players;
-        this.joinDate = new Date();
-
+    public Date getJoinDate(){
+        return this.joinDate;
     }
 
-   /* public void setPlayer (Player players){
-        this.players = players;
+    public Set<Ship> getShips() {
+        return ships;
     }
 
-    public Game getGames() {
-        return games;
+    public void setShips(Set<Ship> ships) {
+        this.ships = ships;
     }
 
-    public void setGames (Game games){
-        this.games = games;
-    }*/
+    public List<Object> getGamePlayerShipsDTO() {
+        return ships.stream().map(s -> s.getShipDTO()).collect(Collectors.toList());
+    }
 
+    public Map<String,Object> getGamePlayerDTO() {
+        Map<String,Object>  gamePlayerDTO = new LinkedHashMap<>();
+        gamePlayerDTO.put("id", this.id);
+        gamePlayerDTO.put("player", this.player.getPlayerDTO());
+        gamePlayerDTO.put("joinDate", this.joinDate);
+        return gamePlayerDTO;
+    }
 }

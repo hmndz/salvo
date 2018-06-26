@@ -28,6 +28,9 @@ public class GamePlayer {
     @OneToMany(mappedBy = "gamePlayer", fetch = FetchType.EAGER)
     private Set<Ship> ships = new HashSet<>();
 
+    @OneToMany(mappedBy = "gamePlayer", fetch = FetchType.EAGER)
+    private Set<Salvo> salvos = new HashSet<>();
+
     public GamePlayer(){}
 
     public GamePlayer(Player player, Game game){
@@ -39,6 +42,11 @@ public class GamePlayer {
     public void addShip(Ship ship){
         ship.setGamePlayer(this);
         ships.add(ship);
+    }
+
+    public void addSalvo(Salvo salvo){
+        salvo.setGamePlayer(this);
+        salvos.add(salvo);
     }
 
     public void setJoinDate(Date joinDate) {
@@ -69,8 +77,20 @@ public class GamePlayer {
         this.ships = ships;
     }
 
+    public Set<Salvo> getSalvos() {
+        return salvos;
+    }
+
+    public void setSalvos(Set<Salvo> salvos) {
+        this.salvos = salvos;
+    }
+
     public List<Object> getGamePlayerShipsDTO() {
         return ships.stream().map(s -> s.getShipDTO()).collect(Collectors.toList());
+    }
+
+    public List<Object> getGamePlayerSalvoDTO() {
+        return salvos.stream().map(sal -> sal.getSalvoDTO()).collect(Collectors.toList());
     }
 
     public Map<String,Object> getGamePlayerDTO() {
@@ -80,4 +100,12 @@ public class GamePlayer {
         gamePlayerDTO.put("joinDate", this.joinDate);
         return gamePlayerDTO;
     }
+
+    /*public Map<String, Object> getGamePViewDTO(List<Object> ships){
+        Map<String, Object> gamePlayerDTO = new LinkedHashMap<>();
+        gamePlayerDTO.put("id", this.id);
+        gamePlayerDTO.put("player", this.player.getPlayerDTO());
+        gamePlayerDTO.put("joinDate", this.joinDate);
+        return gamePlayerDTO;
+    }*/
 }

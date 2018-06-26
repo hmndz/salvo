@@ -48,12 +48,13 @@ public class Game {
         return gameDTO;
     }
 
-    public Map<String,Object> getGamePViewDTO(List<Object> ships) {
+    public Map<String,Object> getGamePViewDTO(List<Object> ships, List<Object> salvos) {
         Map<String,Object>  gameDTO = new LinkedHashMap<>();
         gameDTO.put("id", this.id);
         gameDTO.put("created", this.creationDate);
         gameDTO.put("gamePlayers",gamePlayers.stream().map(gp -> gp.getGamePlayerDTO()).collect(Collectors.toList()));
         gameDTO.put("ships", ships);
+        gameDTO.put("salvos", salvos);
         return gameDTO;
     }
 

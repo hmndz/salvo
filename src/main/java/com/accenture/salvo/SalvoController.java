@@ -18,6 +18,9 @@ public class SalvoController {
     @Autowired
     GamePlayerRepository gamePlayerRepository;
 
+    @Autowired
+
+
     @RequestMapping("/games")
     public List<Object> getGameIds() {
         List<Game> games = gameRepository.findAll();
@@ -29,7 +32,17 @@ public class SalvoController {
         GamePlayer gamePlayer = gamePlayerRepository.findById(Long.parseLong(gamePlayerId));
         Game game = gamePlayer.getGame();
         List<Object> ships = gamePlayer.getGamePlayerShipsDTO();
-        return game.getGamePViewDTO(ships);
+        List<Object> salvos = gamePlayer.getGamePlayerSalvoDTO();
+        return game.getGamePViewDTO(ships, salvos);
+
     }
 
 }
+
+/*@RequestMapping("game_view/{id}")
+public Object getGameById(@PathVariable("id") StringgamePlayerId) {
+GamePlayer gamePlayer = gamePlayerRepository.findById(Long.parseLong(gamePlayerId));
+Game game = gamePlayer.getGame();
+List<Object> ships = gamePlayer.getGamePlayerShipsDTO();
+return game.getGamePViewDTO(ships);
+}*/

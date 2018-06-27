@@ -6,4 +6,5 @@ import java.util.List;
 
 @RepositoryRestResource
 public interface GameRepository extends JpaRepository<Game, Long> {
+    Game findById(long gameId);
 }

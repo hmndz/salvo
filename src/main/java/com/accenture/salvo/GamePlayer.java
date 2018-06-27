@@ -1,5 +1,4 @@
 package com.accenture.salvo;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -19,7 +18,7 @@ public class GamePlayer {
     private Date joinDate;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "player_id")
+    @JoinColumn(name ="player_id")
     private Player player;
 
     @ManyToOne(fetch = FetchType.EAGER)
@@ -32,70 +31,81 @@ public class GamePlayer {
     @OneToMany(mappedBy = "gamePlayer", fetch = FetchType.EAGER)
     private Set<Salvo> salvos = new HashSet<>();
 
-    public GamePlayer() {
-    }
+    public GamePlayer(){}
 
-    public Player getPlayer() {
-        return this.player;
-    }
-
-    public Game getGame() {
-        return this.game;
-    }
-
-    public GamePlayer(Player player, Game game) {
+    public GamePlayer(Player player, Game game){
         this.player = player;
         this.game = game;
         this.joinDate = new Date();
+    }
+
+    public void addShip(Ship ship){
+        ship.setGamePlayer(this);
+        ships.add(ship);
+    }
+
+    public void addSalvo(Salvo salvo){
+        salvo.setGamePlayer(this);
+        salvos.add(salvo);
+    }
+
+    public void setJoinDate(Date joinDate) {
+        this.joinDate = joinDate;
+    }
+
+    public Player getPlayer(){
+        return this.player;
+    }
+
+    public Game getGame(){
+        return this.game;
     }
 
     public Long getId() {
         return this.id;
     }
 
-    public Date getJoinDate() {
+    public Date getJoinDate(){
         return this.joinDate;
     }
 
     public Set<Ship> getShips() {
-        return this.ships;
+        return ships;
     }
 
-    public void addShip(Ship ship) {
-        this.ships.add(ship);
+    public void setShips(Set<Ship> ships) {
+        this.ships = ships;
     }
 
     public Set<Salvo> getSalvos() {
-        return this.salvos;
+        return salvos;
     }
 
-    @JsonIgnore
-    public Map<String, Object> getGamePlayerDTO() {
-        Map<String, Object> gamePlayerDTO = new LinkedHashMap<>();
+    public void setSalvos(Set<Salvo> salvos) {
+        this.salvos = salvos;
+    }
+
+    public List<Object> getGamePlayerShipsDTO() {
+        return ships.stream().map(s -> s.getShipDTO()).collect(Collectors.toList());
+    }
+
+    public List<Object> getGamePlayerSalvoDTO() {
+        return salvos.stream().map(sal -> sal.getSalvoDTO()).collect(Collectors.toList());
+    }
+
+    public Map<String,Object> getGamePlayerDTO() {
+        Map<String,Object>  gamePlayerDTO = new LinkedHashMap<>();
         gamePlayerDTO.put("id", this.id);
         gamePlayerDTO.put("player", this.player.getPlayerDTO());
         gamePlayerDTO.put("joinDate", this.joinDate);
         return gamePlayerDTO;
     }
 
-
-    public Map<String, Object> getGamePlayerViewDTO() {
+    /*public Map<String, Object> getGamePViewDTO(List<Object> ships){
         Map<String, Object> gamePlayerDTO = new LinkedHashMap<>();
-        gamePlayerDTO.put("id", this.game.getId());
-        gamePlayerDTO.put("created", this.game.getCreationDate());
-        gamePlayerDTO.put("gamePlayers", this.game.getGamePlayersDTO());
-        gamePlayerDTO.put("ships", this.getGamePlayerShipsDTO());
-        gamePlayerDTO.put("salvos", this.game.getGameSalvosDTO());
+        gamePlayerDTO.put("id", this.id);
+        gamePlayerDTO.put("player", this.player.getPlayerDTO());
+        gamePlayerDTO.put("joinDate", this.joinDate);
         return gamePlayerDTO;
-    }
-
-    public List<Object> getGamePlayerShipsDTO() {
-        return this.ships.stream().map(ship -> ship.getShipDTO()).collect(Collectors.toList());
-    }
-
-    public Object getSalvosDTO() {
-        return this.salvos.stream().map(sal -> sal.getSalvoDTO()).collect(Collectors.toList());
-    }
+    }*/
 }
-
-

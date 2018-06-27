@@ -113,10 +113,10 @@ public class SalvoApplication {
 
 //Salvos
 
-                Salvo salvo1 = new Salvo(turn1, gamePlayer1, salvoLocation1);
-                Salvo salvo2 = new Salvo(turn1, gamePlayer2, salvoLocation2);
-                Salvo salvo3 = new Salvo(turn2, gamePlayer1, salvoLocation3);
-                Salvo salvo4 = new Salvo(turn2, gamePlayer2, salvoLocation4);
+                Salvo salvo1 = new Salvo(1, gamePlayer1, salvoLocation1);
+                Salvo salvo2 = new Salvo(1, gamePlayer2, salvoLocation2);
+                Salvo salvo3 = new Salvo(2, gamePlayer1, salvoLocation3);
+                Salvo salvo4 = new Salvo(2, gamePlayer2, salvoLocation4);
 
                 salvoRepository.save(salvo1);
                 salvoRepository.save(salvo2);
@@ -124,7 +124,10 @@ public class SalvoApplication {
                 salvoRepository.save(salvo4);
 
 
-                };
+            };
 
         }
 }
+
+
+HELLOO

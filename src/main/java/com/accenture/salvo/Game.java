@@ -25,20 +25,32 @@ public class Game {
         this.creationDate = date;
     }
 
-
-    public Date getCreationDate(){
-        return this.creationDate;
+    @JsonIgnore
+    public Object getGamePlayersDTO() {
+        return this.gamePlayers.stream().map(gp -> gp.getGamePlayerDTO()).collect(Collectors.toList());
     }
 
     @JsonIgnore
     public List<Player> getPlayers(){
-        return this.gamePlayers.stream().map(player -> player.getPlayer()).collect(Collectors.toList());
+        return this.gamePlayers.stream().map(p -> p.getPlayer()).collect(Collectors.toList());
     }
 
     public void addGamePlayer(GamePlayer gamePlayer){
         this.gamePlayers.add(gamePlayer);
     }
 
+    public Date getCreationDate(){
+        return this.creationDate;
+    }
+
+    public long getId() {
+        return this.id;
+    }
+
+    public Object getGameSalvosDTO(){
+        return gamePlayers.stream().flatMap(gp->
+                gp.getSalvos().stream().map(salvo -> salvo.getSalvoDTO())).collect(Collectors.toList());
+    }
 
     public Map<String,Object> getGameDTO() {
         Map<String,Object>  gameDTO = new LinkedHashMap<>();
@@ -48,7 +60,8 @@ public class Game {
         return gameDTO;
     }
 
-    public Map<String,Object> getGamePViewDTO(List<Object> ships, List<Object> salvos) {
+
+    /*public Map<String,Object> getGamePViewDTO(List<Object> ships, List<Object> salvos) {
         Map<String,Object>  gameDTO = new LinkedHashMap<>();
         gameDTO.put("id", this.id);
         gameDTO.put("created", this.creationDate);
@@ -56,6 +69,6 @@ public class Game {
         gameDTO.put("ships", ships);
         gameDTO.put("salvos", salvos);
         return gameDTO;
-    }
+    }*/
 
  }

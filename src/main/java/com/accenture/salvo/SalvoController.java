@@ -22,7 +22,7 @@ public class SalvoController {
     @RequestMapping("game_view/{id}")
     public Object getGameById(@PathVariable("id") Long gamePlayerId) {
         GamePlayer gamePlayer = gamePlayerRepository.findOne(gamePlayerId);
-        return gamePlayer.getGameplayerViewDTO();
+        return gamePlayer.getGamePlayerViewDTO();
 
     }
 
@@ -34,8 +34,9 @@ public class SalvoController {
 
 }
 
-/*@RequestMapping("game_view/{id}")
-public Object getGameById(@PathVariable("id") StringgamePlayerId) {
+/*test1.
+@RequestMapping("game_view/{id}")
+public Object getGameById(@PathVariable("id") StringGamePlayerId) {
 GamePlayer gamePlayer = gamePlayerRepository.findById(Long.parseLong(gamePlayerId));
 Game game = gamePlayer.getGame();
 List<Object> ships = gamePlayer.getGamePlayerShipsDTO();

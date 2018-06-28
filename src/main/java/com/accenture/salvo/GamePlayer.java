@@ -86,7 +86,7 @@ public class GamePlayer {
         return gamePlayerDTO;
     }
 
-    public Map<String, Object> getGameplayerViewDTO() {
+    public Map<String, Object> getGamePlayerViewDTO() {
         Map<String, Object> gamePlayerDTO = new LinkedHashMap<>();
         gamePlayerDTO.put("id", this.game.getId());
         gamePlayerDTO.put("created", this.game.getCreationDate());

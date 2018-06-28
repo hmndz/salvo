@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3e53e8f-8524-4097-9ba6-d2122856a95d" name="Default" comment="" />
+    <list default="true" id="f79fe23c-c7a0-41fc-8459-05f0d0d5f99a" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/.gradle/" />
+    <ignored path="$PROJECT_DIR$/build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +17,68 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="salvo" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="SalvoApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/accenture/salvo/SalvoApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="161" column="8" lean-forward="true" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Salvo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/accenture/salvo/Salvo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GamePlayer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/accenture/salvo/GamePlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="17" column="4" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SalvoController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/accenture/salvo/SalvoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="146">
+              <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -24,12 +86,12 @@
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
-        <entry key="$PROJECT_DIR$" value="C:\Mindhub\gradle-4.7" />
+        <entry key="$PROJECT_DIR$" value="C:\Mindhub\gradle-4.8" />
       </map>
     </option>
     <option name="myGradleVersions">
       <map>
-        <entry key="$PROJECT_DIR$" value="4.7" />
+        <entry key="$PROJECT_DIR$" value="4.8" />
       </map>
     </option>
     <option name="availableProjects">
@@ -255,8 +317,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4590392212249" />
-        <entry key="$PROJECT_DIR$/.gradle" value="0" />
+        <entry key="$PROJECT_DIR$" value="3060112606426" />
         <entry key="$PROJECT_DIR$/build.gradle" value="3014909628" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="317942783" />
       </map>
@@ -275,11 +336,8 @@
                           <list>
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-gradle-plugin/1.5.15.BUILD-SNAPSHOT/d19480dc63d2e7c4e79e82a839c7af20f290a9ae/spring-boot-gradle-plugin-1.5.15.BUILD-SNAPSHOT.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-loader-tools/1.5.15.BUILD-SNAPSHOT/65f9e1d097a1715f558c7443ffcdba1b2d3c6eab/spring-boot-loader-tools-1.5.15.BUILD-SNAPSHOT.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.spring.gradle/dependency-management-plugin/1.0.5.RELEASE/e9f2761e13da4228793ee5fcaa983889e68c4c61/dependency-management-plugin-1.0.5.RELEASE-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.spring.gradle/dependency-management-plugin/1.0.5.RELEASE/3589987a66349bdc10b18c6c4a5463ffd084c908/dependency-management-plugin-1.0.5.RELEASE.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.3.18.RELEASE/6ce871ab6fbcc92da74aaa53861a33828b20e346/spring-core-4.3.18.RELEASE-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.3.18.RELEASE/4acbce682c3dfe38181d57b7e0792e2cc21e4f77/spring-core-4.3.18.RELEASE.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/ecf26c7507d67782a3bbd148d170b31dfad001aa/commons-logging-1.2-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar" />
                           </list>
                         </option>
@@ -292,81 +350,83 @@
               <option name="name" value="salvo" />
               <option name="projectBuildClasspath">
                 <list>
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/ant-1.9.9.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/ant-launcher-1.9.9.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-base-services-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-base-services-groovy-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-build-cache-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-build-option-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-cli-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-core-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-core-api-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-docs-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-installation-beacon-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-jvm-services-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-kotlin-dsl-0.16.3.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-kotlin-dsl-tooling-builders-0.16.3.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-kotlin-dsl-tooling-models-0.16.3.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-launcher-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-logging-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-messaging-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-model-core-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-model-groovy-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-native-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-persistent-cache-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-process-services-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-resources-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-runtime-api-info-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-tooling-api-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/gradle-wrapper-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/groovy-all-2.4.12.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-announce-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-antlr-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-build-cache-http-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-build-comparison-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-build-init-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-code-quality-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-composite-builds-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-dependency-management-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-diagnostics-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-ear-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-ide-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-ide-native-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-ide-play-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-ivy-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-jacoco-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-javascript-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-language-groovy-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-language-java-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-language-jvm-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-language-native-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-language-scala-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-maven-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-osgi-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-platform-base-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-platform-jvm-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-platform-native-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-platform-play-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-plugin-development-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-plugin-use-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-plugins-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-publish-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-reporting-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-resources-gcs-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-resources-http-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-resources-s3-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-resources-sftp-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-scala-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-signing-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-test-kit-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-testing-base-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-testing-junit-platform-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-testing-jvm-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-testing-native-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-tooling-api-builders-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-version-control-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/gradle-workers-4.7.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-4.7/lib/plugins/ivy-2.2.0.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/ant-1.9.11.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/ant-launcher-1.9.11.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-base-services-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-base-services-groovy-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-build-cache-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-build-option-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-cli-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-core-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-core-api-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-docs-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-installation-beacon-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-jvm-services-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-kotlin-dsl-0.17.5.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-kotlin-dsl-provider-plugins-0.17.5.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-kotlin-dsl-provider-spi-0.17.5.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-kotlin-dsl-tooling-builders-0.17.5.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-kotlin-dsl-tooling-models-0.17.5.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-launcher-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-logging-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-messaging-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-model-core-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-model-groovy-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-native-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-persistent-cache-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-process-services-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-resources-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-runtime-api-info-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-tooling-api-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/gradle-wrapper-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/groovy-all-2.4.12.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-announce-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-antlr-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-build-cache-http-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-build-comparison-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-build-init-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-code-quality-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-composite-builds-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-dependency-management-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-diagnostics-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-ear-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-ide-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-ide-native-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-ide-play-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-ivy-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-jacoco-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-javascript-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-language-groovy-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-language-java-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-language-jvm-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-language-native-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-language-scala-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-maven-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-osgi-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-platform-base-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-platform-jvm-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-platform-native-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-platform-play-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-plugin-development-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-plugin-use-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-plugins-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-publish-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-reporting-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-resources-gcs-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-resources-http-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-resources-s3-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-resources-sftp-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-scala-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-signing-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-test-kit-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-testing-base-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-testing-junit-platform-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-testing-jvm-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-testing-native-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-tooling-api-builders-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-version-control-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/gradle-workers-4.8.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-4.8/lib/plugins/ivy-2.2.0.jar" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/java" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/groovy" />
                 </list>
@@ -376,35 +436,71 @@
         </entry>
       </map>
     </option>
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
     <option name="projectSyncType">
       <map>
+        <entry key="C:/" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../.." value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../Workshop" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../Workshop/salvo" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/.." value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../Andrea_battleship-master" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../Java/Salvo" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../Java/salvo" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../New-Battleship-Game-JAVA-JS-Spring-SQL-master" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../Oriol_Battleship-game-master" value="PREVIEW" />
         <entry key="$PROJECT_DIR$" value="IMPORT" />
-        <entry key="$USER_HOME$/Downloads/Salvo" value="PREVIEW" />
-        <entry key="$USER_HOME$/Downloads/Salvo_" value="PREVIEW" />
-        <entry key="$USER_HOME$/Downloads/Salvo_/Salvo_" value="PREVIEW" />
-        <entry key="$USER_HOME$/Downloads/salvo_q" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../salvo-master" value="PREVIEW" />
+        <entry key="$USER_HOME$/Desktop/Battleship-game-master" value="PREVIEW" />
+        <entry key="$USER_HOME$/Desktop/FullSalvo-Project-master" value="PREVIEW" />
+        <entry key="$USER_HOME$/Desktop/Keyssalvo-master" value="PREVIEW" />
+        <entry key="$USER_HOME$/Desktop/NICO2_salvo-master" value="PREVIEW" />
+        <entry key="$USER_HOME$/Desktop/Nico_2_salvo-master" value="PREVIEW" />
+        <entry key="$USER_HOME$/Desktop/SAM2_salvo-master" value="PREVIEW" />
+        <entry key="$USER_HOME$/Desktop/SAMsalvo-master" value="PREVIEW" />
+        <entry key="$USER_HOME$/Desktop/battleship-master" value="PREVIEW" />
+        <entry key="$USER_HOME$/Desktop/salvo-master" value="PREVIEW" />
+        <entry key="$USER_HOME$/Desktop/salvoGitHub-master" value="PREVIEW" />
+        <entry key="$USER_HOME$/Documents/GitHub/salvo" value="PREVIEW" />
       </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/accenture/salvo/Salvo.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/web/js/game.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/web/js/game_2.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/accenture/salvo/SalvoApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/web/game_2.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/accenture/salvo/Salvo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/accenture/salvo/SalvoController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/accenture/salvo/GamePlayer.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="676" />
-    <option name="width" value="697" />
-    <option name="height" value="735" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="683" />
+    <option name="width" value="683" />
+    <option name="height" value="728" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -442,12 +538,10 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
-  </component>
-  <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -462,21 +556,48 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
     <configuration name="SalvoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.accenture.salvo.SalvoApplication" />
-      <module name="salvo_main" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.accenture.salvo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="MAIN_CLASS_NAME" value="com.accenture.salvo.SalvoApplication" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="salvo_main" />
+      <envs />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" />
@@ -486,13 +607,24 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
+      <envs />
       <patterns />
     </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
@@ -505,124 +637,185 @@
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
       <option name="USE_DEFAULT_REPORTERS" value="false" />
       <option name="PROPERTIES_FILE" />
+      <envs />
       <properties />
       <listeners />
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
     <recent_temporary>
-      <list>
-        <item itemvalue="Application.SalvoApplication" />
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.SalvoApplication" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d3e53e8f-8524-4097-9ba6-d2122856a95d" name="Default" comment="" />
-      <created>1530132724620</created>
+      <changelist id="f79fe23c-c7a0-41fc-8459-05f0d0d5f99a" name="Default" comment="" />
+      <created>1530144419954</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1530132724620</updated>
+      <updated>1530144419954</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="683" y="0" width="683" height="728" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info id="Image Layers" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3250825" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info id="Capture Tool" />
-      <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
-      <window_info anchor="bottom" id="Build" weight="0.33333334" />
-      <window_info anchor="right" id="Gradle" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3277027" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47191012" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26163724" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25657895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/accenture/salvo/Salvo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/accenture/salvo/SalvoApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#480#481#0" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
-            <element signature="e#545#546#0" expanded="true" />
-            <element signature="e#577#578#0" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#722#723#0" expanded="true" />
-            <element signature="e#774#775#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
-            <element signature="e#921#922#0" expanded="true" />
-            <element signature="e#958#959#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/accenture/salvo/GamePlayer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/js/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="91" column="51" lean-forward="true" selection-start-line="91" selection-start-column="51" selection-end-line="91" selection-end-column="51" />
+        <state relative-caret-position="306">
+          <caret line="18" column="51" lean-forward="false" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/js/games_3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/css/game.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/js/game_2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="58" column="11" lean-forward="true" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="5" column="1991" lean-forward="true" selection-start-line="5" selection-start-column="1991" selection-end-line="5" selection-end-column="1991" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/js/popper.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="3" column="2750" lean-forward="false" selection-start-line="3" selection-start-column="2750" selection-end-line="3" selection-end-column="2750" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/accenture/salvo/SalvoApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="767">
-          <caret line="123" column="45" lean-forward="true" selection-start-line="123" selection-start-column="45" selection-end-line="123" selection-end-column="45" />
+        <state relative-caret-position="34">
+          <caret line="161" column="8" lean-forward="true" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/game_2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/accenture/salvo/Salvo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/accenture/salvo/SalvoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="146">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/accenture/salvo/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/accenture/salvo/GamePlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-425">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/accenture/salvo/Ship.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-374">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="17">
+          <caret line="17" column="4" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/salvo.iml" filepath="$PROJECT_DIR$/salvo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/salvo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/salvo_main.iml" group="salvo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/salvo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/salvo_test.iml" group="salvo" />
+    </modules>
+  </component>
+</project>

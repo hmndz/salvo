@@ -63,6 +63,14 @@ public class GamePlayer {
         return this.salvos;
     }
 
+    public List<Object> getGamePlayerShipsDTO() {
+        return this.ships.stream().map(ship -> ship.getShipDTO()).collect(Collectors.toList());
+    }
+
+    public Object getSalvosDTO() {
+        return this.salvos.stream().map(sal -> sal.getSalvoDTO()).collect(Collectors.toList());
+    }
+
     public GamePlayer(Player player, Game game) {
         this.player = player;
         this.game = game;
@@ -88,13 +96,7 @@ public class GamePlayer {
         return gamePlayerDTO;
     }
 
-    public List<Object> getGamePlayerShipsDTO() {
-        return this.ships.stream().map(ship -> ship.getShipDTO()).collect(Collectors.toList());
-    }
 
-    public Object getSalvosDTO() {
-        return this.salvos.stream().map(sal -> sal.getSalvoDTO()).collect(Collectors.toList());
-    }
 
 }
 

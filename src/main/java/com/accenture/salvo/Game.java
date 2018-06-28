@@ -17,6 +17,14 @@ public class Game {
     @OneToMany(mappedBy = "game", fetch = FetchType.EAGER)
     private Set<GamePlayer> gamePlayers = new HashSet<>();
 
+    public long getId() {
+        return this.id;
+    }
+
+    public Date getCreationDate(){
+        return this.creationDate;
+    }
+
     public Game(){
         this.creationDate = new Date();
     }
@@ -24,6 +32,11 @@ public class Game {
     public Game(Date date){
         this.creationDate = date;
     }
+
+    public void addGamePlayer(GamePlayer gamePlayer){
+        this.gamePlayers.add(gamePlayer);
+    }
+
 
     @JsonIgnore
     public Object getGamePlayersDTO() {
@@ -33,18 +46,6 @@ public class Game {
     @JsonIgnore
     public List<Player> getPlayers(){
         return this.gamePlayers.stream().map(p -> p.getPlayer()).collect(Collectors.toList());
-    }
-
-    public void addGamePlayer(GamePlayer gamePlayer){
-        this.gamePlayers.add(gamePlayer);
-    }
-
-    public Date getCreationDate(){
-        return this.creationDate;
-    }
-
-    public long getId() {
-        return this.id;
     }
 
     public Object getGameSalvosDTO(){
@@ -61,7 +62,8 @@ public class Game {
     }
 
 
-    /*public Map<String,Object> getGamePViewDTO(List<Object> ships, List<Object> salvos) {
+    /* test 3.1
+        public Map<String,Object> getGamePViewDTO(List<Object> ships, List<Object> salvos) {
         Map<String,Object>  gameDTO = new LinkedHashMap<>();
         gameDTO.put("id", this.id);
         gameDTO.put("created", this.creationDate);

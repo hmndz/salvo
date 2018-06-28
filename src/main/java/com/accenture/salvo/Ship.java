@@ -20,15 +20,12 @@ public class Ship {
 
     public Ship( ) {    }
 
-    public void setGamePlayer(GamePlayer gamePlayer) {
-        this.gamePlayer = gamePlayer;
+    public GamePlayer getGamePlayer() {
+        return this.gamePlayer;
     }
 
-
-    public Ship(String shipType, GamePlayer gamePlayer, List<String> locations) {
-        this.shipType = shipType;
+    public void setGamePlayer(GamePlayer gamePlayer) {
         this.gamePlayer = gamePlayer;
-        this.locations = locations;
     }
 
     public void setShipType(String shipType) {
@@ -39,8 +36,11 @@ public class Ship {
         this.locations = locations;
     }
 
-    public GamePlayer getGamePlayer() {
-        return this.gamePlayer;
+
+    public Ship(String shipType, GamePlayer gamePlayer, List<String> locations) {
+        this.shipType = shipType;
+        this.gamePlayer = gamePlayer;
+        this.locations = locations;
     }
 
     public Map<String, Object> getShipDTO(){

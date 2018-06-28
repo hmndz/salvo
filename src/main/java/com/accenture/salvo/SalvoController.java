@@ -19,18 +19,17 @@ public class SalvoController {
     GamePlayerRepository gamePlayerRepository;
 
 
-
-    @RequestMapping("/games")
-    public Object getGameIds() {
-        List<Game> games = gameRepository.findAll();
-        return games.stream().map(Game::getGameDTO).collect(Collectors.toList());
-    }
-
     @RequestMapping("game_view/{id}")
     public Object getGameById(@PathVariable("id") Long gamePlayerId) {
         GamePlayer gamePlayer = gamePlayerRepository.findOne(gamePlayerId);
         return gamePlayer.getGameplayerViewDTO();
 
+    }
+
+    @RequestMapping("/games")
+    public Object getGameIds() {
+        List<Game> games = gameRepository.findAll();
+        return games.stream().map(Game::getGameDTO).collect(Collectors.toList());
     }
 
 }

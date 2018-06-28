@@ -60,75 +60,75 @@ public class SalvoApplication {
 
 //Ship Locations
 
-                List<String> Shiplocation1 = new ArrayList<>(Arrays.asList("H2", "H3", "H4"));
-                List<String> Shiplocation2 = new ArrayList<>(Arrays.asList("E1", "F1", "G1"));
-                List<String> Shiplocation3 = new ArrayList<>(Arrays.asList("B4", "B5"));
-                List<String> Shiplocation4 = new ArrayList<>(Arrays.asList("B5", "C5", "D5"));
-                List<String> Shiplocation5 = new ArrayList<>(Arrays.asList("F1", "F2"));
+                List<String> ShipLocation1 = new ArrayList<>(Arrays.asList("H2", "H3", "H4"));
+                List<String> ShipLocation2 = new ArrayList<>(Arrays.asList("E1", "F1", "G1"));
+                List<String> ShipLocation3 = new ArrayList<>(Arrays.asList("B4", "B5"));
+                List<String> ShipLocation4 = new ArrayList<>(Arrays.asList("B5", "C5", "D5"));
+                List<String> ShipLocation5 = new ArrayList<>(Arrays.asList("F1", "F2"));
 
-                List<String> Shiplocation6 = new ArrayList<>(Arrays.asList("B5", "C5", "D5"));
-                List<String> Shiplocation7 = new ArrayList<>(Arrays.asList("C6", "C7"));
-                List<String> Shiplocation8 = new ArrayList<>(Arrays.asList("A2", "A3", "A4"));
-                List<String> Shiplocation9 = new ArrayList<>(Arrays.asList("G6", "H6"));
+                List<String> ShipLocation6 = new ArrayList<>(Arrays.asList("B5", "C5", "D5"));
+                List<String> ShipLocation7 = new ArrayList<>(Arrays.asList("C6", "C7"));
+                List<String> ShipLocation8 = new ArrayList<>(Arrays.asList("A2", "A3", "A4"));
+                List<String> ShipLocation9 = new ArrayList<>(Arrays.asList("G6", "H6"));
 
-                List<String> Shiplocation10 = new ArrayList<>(Arrays.asList("B5", "C5", "D5"));
-                List<String> Shiplocation11 = new ArrayList<>(Arrays.asList("C6", "C7"));
-                List<String> Shiplocation12 = new ArrayList<>(Arrays.asList("A2", "A3", "A4"));
-                List<String> Shiplocation13 = new ArrayList<>(Arrays.asList("G6", "H6"));
+                List<String> ShipLocation10 = new ArrayList<>(Arrays.asList("B5", "C5", "D5"));
+                List<String> ShipLocation11 = new ArrayList<>(Arrays.asList("C6", "C7"));
+                List<String> ShipLocation12 = new ArrayList<>(Arrays.asList("A2", "A3", "A4"));
+                List<String> ShipLocation13 = new ArrayList<>(Arrays.asList("G6", "H6"));
 
-                List<String> Shiplocation14 = new ArrayList<>(Arrays.asList("B5", "C5", "D5"));
-                List<String> Shiplocation15 = new ArrayList<>(Arrays.asList("C6", "C7"));
-                List<String> Shiplocation16 = new ArrayList<>(Arrays.asList("A2", "A3", "A4"));
-                List<String> Shiplocation17 = new ArrayList<>(Arrays.asList("G6", "H6"));
+                List<String> ShipLocation14 = new ArrayList<>(Arrays.asList("B5", "C5", "D5"));
+                List<String> ShipLocation15 = new ArrayList<>(Arrays.asList("C6", "C7"));
+                List<String> ShipLocation16 = new ArrayList<>(Arrays.asList("A2", "A3", "A4"));
+                List<String> ShipLocation17 = new ArrayList<>(Arrays.asList("G6", "H6"));
 
-                List<String> Shiplocation18 = new ArrayList<>(Arrays.asList("B5", "C5", "D5"));
-                List<String> Shiplocation19 = new ArrayList<>(Arrays.asList("C6", "C7"));
-                List<String> Shiplocation20 = new ArrayList<>(Arrays.asList("A2", "A3", "A4"));
-                List<String> Shiplocation21 = new ArrayList<>(Arrays.asList("G6", "H6"));
+                List<String> ShipLocation18 = new ArrayList<>(Arrays.asList("B5", "C5", "D5"));
+                List<String> ShipLocation19 = new ArrayList<>(Arrays.asList("C6", "C7"));
+                List<String> ShipLocation20 = new ArrayList<>(Arrays.asList("A2", "A3", "A4"));
+                List<String> ShipLocation21 = new ArrayList<>(Arrays.asList("G6", "H6"));
 
-                List<String> Shiplocation22 = new ArrayList<>(Arrays.asList("B5", "C5", "D5"));
-                List<String> Shiplocation23 = new ArrayList<>(Arrays.asList("C6", "C7"));
+                List<String> ShipLocation22 = new ArrayList<>(Arrays.asList("B5", "C5", "D5"));
+                List<String> ShipLocation23 = new ArrayList<>(Arrays.asList("C6", "C7"));
 
-                List<String> Shiplocation24 = new ArrayList<>(Arrays.asList("B5", "C5", "D5"));
-                List<String> Shiplocation25 = new ArrayList<>(Arrays.asList("C6", "C7"));
-                List<String> Shiplocation26 = new ArrayList<>(Arrays.asList("A2", "A3", "A4"));
-                List<String> Shiplocation27 = new ArrayList<>(Arrays.asList("G6", "H6"));
+                List<String> ShipLocation24 = new ArrayList<>(Arrays.asList("B5", "C5", "D5"));
+                List<String> ShipLocation25 = new ArrayList<>(Arrays.asList("C6", "C7"));
+                List<String> ShipLocation26 = new ArrayList<>(Arrays.asList("A2", "A3", "A4"));
+                List<String> ShipLocation27 = new ArrayList<>(Arrays.asList("G6", "H6"));
 
 //Ships
 
-                Ship ship1 = shipRepository.save(new Ship("Destroyer", gamePlayer1, Shiplocation1));
-                Ship ship2 = shipRepository.save(new Ship("Submarine", gamePlayer1, Shiplocation2));
-                Ship ship3 = shipRepository.save(new Ship("Patrol Boat", gamePlayer1, Shiplocation3));
-                Ship ship4 = shipRepository.save(new Ship("Destroyer", gamePlayer2, Shiplocation4));
-                Ship ship5 = shipRepository.save(new Ship("Patrol Boat", gamePlayer2, Shiplocation5));
+                Ship ship1 = shipRepository.save(new Ship("Destroyer", gamePlayer1, ShipLocation1));
+                Ship ship2 = shipRepository.save(new Ship("Submarine", gamePlayer1, ShipLocation2));
+                Ship ship3 = shipRepository.save(new Ship("Patrol Boat", gamePlayer1, ShipLocation3));
+                Ship ship4 = shipRepository.save(new Ship("Destroyer", gamePlayer2, ShipLocation4));
+                Ship ship5 = shipRepository.save(new Ship("Patrol Boat", gamePlayer2, ShipLocation5));
 
-                Ship ship6 = shipRepository.save(new Ship("Destroyer", gamePlayer2, Shiplocation6));
-                Ship ship7 = shipRepository.save(new Ship("Patrol Boat", gamePlayer2, Shiplocation7));
-                Ship ship8 = shipRepository.save(new Ship("Submarine", gamePlayer3, Shiplocation8));
-                Ship ship9 = shipRepository.save(new Ship("Patrol Boat", gamePlayer3, Shiplocation9));
+                Ship ship6 = shipRepository.save(new Ship("Destroyer", gamePlayer2, ShipLocation6));
+                Ship ship7 = shipRepository.save(new Ship("Patrol Boat", gamePlayer2, ShipLocation7));
+                Ship ship8 = shipRepository.save(new Ship("Submarine", gamePlayer3, ShipLocation8));
+                Ship ship9 = shipRepository.save(new Ship("Patrol Boat", gamePlayer3, ShipLocation9));
 
-                Ship ship10 = shipRepository.save(new Ship("Destroyer", gamePlayer4, Shiplocation10));
-                Ship ship11 = shipRepository.save(new Ship("Patrol Boat", gamePlayer4, Shiplocation11));
-                Ship ship12 = shipRepository.save(new Ship("Submarine", gamePlayer5, Shiplocation12));
-                Ship ship13 = shipRepository.save(new Ship("Patrol Boat", gamePlayer5, Shiplocation13));
+                Ship ship10 = shipRepository.save(new Ship("Destroyer", gamePlayer4, ShipLocation10));
+                Ship ship11 = shipRepository.save(new Ship("Patrol Boat", gamePlayer4, ShipLocation11));
+                Ship ship12 = shipRepository.save(new Ship("Submarine", gamePlayer5, ShipLocation12));
+                Ship ship13 = shipRepository.save(new Ship("Patrol Boat", gamePlayer5, ShipLocation13));
 
-                Ship ship14 = shipRepository.save(new Ship("Destroyer", gamePlayer6, Shiplocation10));
-                Ship ship15 = shipRepository.save(new Ship("Patrol Boat", gamePlayer6, Shiplocation11));
-                Ship ship16 = shipRepository.save(new Ship("Submarine", gamePlayer7, Shiplocation12));
-                Ship ship17 = shipRepository.save(new Ship("Patrol Boat", gamePlayer7, Shiplocation13));
+                Ship ship14 = shipRepository.save(new Ship("Destroyer", gamePlayer6, ShipLocation10));
+                Ship ship15 = shipRepository.save(new Ship("Patrol Boat", gamePlayer6, ShipLocation11));
+                Ship ship16 = shipRepository.save(new Ship("Submarine", gamePlayer7, ShipLocation12));
+                Ship ship17 = shipRepository.save(new Ship("Patrol Boat", gamePlayer7, ShipLocation13));
 
-                Ship ship18 = shipRepository.save(new Ship("Destroyer", gamePlayer8, Shiplocation10));
-                Ship ship19 = shipRepository.save(new Ship("Patrol Boat", gamePlayer8, Shiplocation11));
-                Ship ship20 = shipRepository.save(new Ship("Submarine", gamePlayer9, Shiplocation12));
-                Ship ship21 = shipRepository.save(new Ship("Patrol Boat", gamePlayer9, Shiplocation13));
+                Ship ship18 = shipRepository.save(new Ship("Destroyer", gamePlayer8, ShipLocation10));
+                Ship ship19 = shipRepository.save(new Ship("Patrol Boat", gamePlayer8, ShipLocation11));
+                Ship ship20 = shipRepository.save(new Ship("Submarine", gamePlayer9, ShipLocation12));
+                Ship ship21 = shipRepository.save(new Ship("Patrol Boat", gamePlayer9, ShipLocation13));
 
-                Ship ship22 = shipRepository.save(new Ship("Destroyer", gamePlayer10, Shiplocation10));
-                Ship ship23 = shipRepository.save(new Ship("Patrol Boat", gamePlayer10, Shiplocation11));
+                Ship ship22 = shipRepository.save(new Ship("Destroyer", gamePlayer10, ShipLocation10));
+                Ship ship23 = shipRepository.save(new Ship("Patrol Boat", gamePlayer10, ShipLocation11));
 
-                Ship ship24 = shipRepository.save(new Ship("Destroyer", gamePlayer12, Shiplocation10));
-                Ship ship25 = shipRepository.save(new Ship("Patrol Boat", gamePlayer12, Shiplocation11));
-                Ship ship26 = shipRepository.save(new Ship("Submarine", gamePlayer13, Shiplocation12));
-                Ship ship27 = shipRepository.save(new Ship("Patrol Boat", gamePlayer13, Shiplocation13));
+                Ship ship24 = shipRepository.save(new Ship("Destroyer", gamePlayer12, ShipLocation10));
+                Ship ship25 = shipRepository.save(new Ship("Patrol Boat", gamePlayer12, ShipLocation11));
+                Ship ship26 = shipRepository.save(new Ship("Submarine", gamePlayer13, ShipLocation12));
+                Ship ship27 = shipRepository.save(new Ship("Patrol Boat", gamePlayer13, ShipLocation13));
 
 
 

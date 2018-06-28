@@ -19,7 +19,7 @@ public class SalvoController {
     GamePlayerRepository gamePlayerRepository;
 
 
-    @RequestMapping("game_view/{id}")
+    @RequestMapping("/game_view/{id}")
     public Object getGameById(@PathVariable("id") Long gamePlayerId) {
         GamePlayer gamePlayer = gamePlayerRepository.findOne(gamePlayerId);
         return gamePlayer.getGamePlayerViewDTO();

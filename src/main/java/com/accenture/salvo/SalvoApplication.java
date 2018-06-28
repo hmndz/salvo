@@ -18,7 +18,7 @@ public class SalvoApplication {
     @Bean
     public CommandLineRunner initData(PlayerRepository playerRepository, GameRepository gameRepository,
                                       GamePlayerRepository gamePlayerRepository, ShipRepository shipRepository,
-                                      SalvoRepository salvoRepository){
+                                      SalvoRepository salvoRepository, ScoreRepository scoreRepository){
 
 
             return (args) -> {
@@ -186,6 +186,30 @@ public class SalvoApplication {
                 Salvo salvo19 = salvoRepository.save(new Salvo(2, gamePlayer9, salvoLocation19));
                 Salvo salvo20 = salvoRepository.save(new Salvo(2, gamePlayer10, salvoLocation20));
                 Salvo salvo21 = salvoRepository.save(new Salvo(3, gamePlayer10, salvoLocation21));
+
+// Scores
+
+               /* Score score1  = scoreRepository.save (new Score( 1, game1, jBauer));
+                Score score2  = scoreRepository.save (new Score( 0, game1, cObrian));
+
+                Score score3  = scoreRepository.save (new Score( 0.5, game2, jBauer));
+                Score score4  = scoreRepository.save (new Score( 0.5, game2, cObrian));
+
+                Score score5  = scoreRepository.save (new Score( 1, game3, cObrian));
+                Score score6  = scoreRepository.save (new Score( 0, game3, tAlmeida));
+
+                Score score7  = scoreRepository.save (new Score( 0.5, game4, cObrian));
+                Score score8  = scoreRepository.save (new Score( 0.5, game4, jBauer));
+
+                Score score9   = scoreRepository.save (new Score( -1, game5, tAlmeida));
+                Score score10  = scoreRepository.save (new Score( -1, game5, jBauer));
+
+                Score score11  = scoreRepository.save (new Score( -1, game6, kBauer));
+                Score score12  = scoreRepository.save (new Score( -1, game7, tAlmeida));
+
+                Score score13  = scoreRepository.save (new Score( -1, game8, kBauer));
+                Score score14  = scoreRepository.save (new Score( -1, game8, tAlmeida));
+    */
 
 
             };

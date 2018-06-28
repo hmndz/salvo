@@ -17,6 +17,9 @@ public class Game {
     @OneToMany(mappedBy = "game", fetch = FetchType.EAGER)
     private Set<GamePlayer> gamePlayers = new HashSet<>();
 
+    @OneToMany(mappedBy = "game", fetch = FetchType.EAGER)
+    private Set<Score> scores = new HashSet<>();
+
     public long getId() {
         return this.id;
     }
@@ -37,6 +40,13 @@ public class Game {
         this.gamePlayers.add(gamePlayer);
     }
 
+    public Set<Score> getScores() {
+        return scores;
+    }
+
+    public void setScores(Set<Score> scores) {
+        this.scores = scores;
+    }
 
     @JsonIgnore
     public Object getGamePlayersDTO() {
@@ -58,10 +68,11 @@ public class Game {
         gameDTO.put("id", this.id);
         gameDTO.put("created", this.creationDate);
         gameDTO.put("gamePlayers",gamePlayers.stream().map(gp -> gp.getGamePlayerDTO()).collect(Collectors.toList()));
+        gameDTO.put("scores", scores.stream().map(Score::getScoreDTO).collect((Collectors.toList())));
         return gameDTO;
     }
 
-
+}
     /* test 3.1
         public Map<String,Object> getGamePViewDTO(List<Object> ships, List<Object> salvos) {
         Map<String,Object>  gameDTO = new LinkedHashMap<>();
@@ -73,4 +84,5 @@ public class Game {
         return gameDTO;
     }*/
 
- }
+
+

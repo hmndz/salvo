@@ -58,6 +58,25 @@ public class Player {
         this.id = id;
     }
 
+    public List<Game> getGames(){
+        return this.gamePlayers.stream().map(game -> game.getGame()).collect(Collectors.toList());
+    }
+
+    private long getWonGames() {
+        long total = scores.stream().filter(score -> score.getScore() == 1).count();
+        return total;
+    }
+
+    private double getLostGames() {
+        long total = scores.stream().filter(score -> score.getScore() == 0).count();
+        return total;
+    }
+
+    private long getTiedGames() {
+        long total = scores.stream().filter(score -> score.getScore() == 0.5).count();
+        return total;
+    }
+
     public Map<String, Object> getPlayerDTO() {
         Map<String,Object>  playerDTO = new LinkedHashMap<>();
         playerDTO.put("id", this.id);
@@ -72,30 +91,11 @@ public class Player {
         return AllScoreDTO;
     }
 
-    public List<Game> getGames(){
-        return this.gamePlayers.stream().map(game -> game.getGame()).collect(Collectors.toList());
-    }
-
-    private long getWonGames() {
-        long total = scores.stream().filter(score -> score.getScore() == 1).count();
-        return total;
-    }
-
-    private long getTiedGames() {
-        long total = scores.stream().filter(score -> score.getScore() == 0.5).count();
-        return total;
-    }
-
-    private double getLostGames() {
-        long total = scores.stream().filter(score -> score.getScore() == 0).count();
-        return total;
-    }
-
     private Object getScoreResumeDTO() {
         Map<String,Object> scoreResume = new LinkedHashMap<>();
         long totalWon = this.getWonGames();
-        double totalTie = this.getTiedGames();
         double totalLost = this.getLostGames();
+        double totalTie = this.getTiedGames();
         double totalTotal = scores.stream().filter(score ->
                 score.getScore() != -1).mapToDouble(score -> score.getScore()).sum();
         scoreResume.put("total", totalTotal);

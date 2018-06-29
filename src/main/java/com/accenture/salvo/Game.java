@@ -37,16 +37,16 @@ public class Game {
         this.creationDate = date;
     }
 
-    public void addGamePlayer(GamePlayer gamePlayer){
-        this.gamePlayers.add(gamePlayer);
-    }
-
     public Set<Score> getScores() {
         return scores;
     }
 
     public void setScores(Set<Score> scores) {
         this.scores = scores;
+    }
+
+    public void addGamePlayer(GamePlayer gamePlayer){
+        this.gamePlayers.add(gamePlayer);
     }
 
     @JsonIgnore

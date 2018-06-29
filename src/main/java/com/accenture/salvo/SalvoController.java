@@ -36,9 +36,8 @@ public class SalvoController {
 
     @RequestMapping("/leaderBoard")
     public List<Object> getLeaderBoard() {
-        List<Player> players = playerRepository.findAll();
-        List<Object> leaderBoard = players.stream().map(player -> player.getAllScoreDTO()).collect(Collectors.toList());
-        return leaderBoard;
+        List<Player> score = playerRepository.findAll();
+        return score.stream().map(player -> player.getAllScoreDTO()).collect(Collectors.toList());
     }
 
 }

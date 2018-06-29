@@ -68,7 +68,7 @@ public class Game {
         gameDTO.put("id", this.id);
         gameDTO.put("created", this.creationDate);
         gameDTO.put("gamePlayers",gamePlayers.stream().map(gp -> gp.getGamePlayerDTO()).collect(Collectors.toList()));
-        gameDTO.put("scores", scores.stream().map(Score::getScoreDTO).collect((Collectors.toList())));
+        gameDTO.put("scores", scores.stream().map(Score::getPlayerScore).collect((Collectors.toList())));
         return gameDTO;
     }
 

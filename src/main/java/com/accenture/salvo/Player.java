@@ -12,14 +12,6 @@ import java.util.stream.Collectors;
 @Entity
 public class Player {
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO )
     private long id;
@@ -28,7 +20,7 @@ public class Player {
     @OneToMany(mappedBy = "player", fetch = FetchType.EAGER)
     private Set<GamePlayer>  gamePlayers = new HashSet<>();
 
-    @OneToMany(mappedBy = "score", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "player", fetch = FetchType.EAGER)
     private Set<Score>  scores = new HashSet<>();
 
     @Override
@@ -58,6 +50,14 @@ public class Player {
         this.scores = scores;
     }
 
+    public long getId() {
+        return this.id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public List<Game> getGames(){
         return this.gamePlayers.stream().map(game -> game.getGame()).collect(Collectors.toList());
     }
@@ -67,6 +67,43 @@ public class Player {
         playerDTO.put("id", this.id);
         playerDTO.put("email", this.userName);
         return playerDTO;
+    }
+
+    public Object getAllScoreDTO() {
+        Map<String,Object> AllScoreDTO = new LinkedHashMap<>();
+
+        AllScoreDTO.put("name", this.userName);
+        AllScoreDTO.put("score", this.getScoreResumeDTO());
+        return AllScoreDTO;
+    }
+
+    private Object getScoreResumeDTO() {
+        Map<String,Object> scoreResume = new LinkedHashMap<>();
+        long totalWon = this.getWonGames();
+        double totalTie = this.getTiedGames();
+        double totalLost = this.getLostGames();
+        double totalTotal = scores.stream().filter(score -> score.getScore() != -1).mapToDouble(score -> score.getScore()).sum();
+
+        scoreResume.put("total", totalTotal);
+        scoreResume.put("won", totalWon);
+        scoreResume.put("lost", totalLost);
+        scoreResume.put("tied", totalTie);
+        return scoreResume;
+    }
+
+    private long getWonGames() {
+        long total = scores.stream().filter(score -> score.getScore() == 1).count();
+        return total;
+    }
+
+    private long getTiedGames() {
+        long total = scores.stream().filter(score -> score.getScore() == 0.5).count();
+        return total;
+    }
+
+    private double getLostGames() {
+        long total = scores.stream().filter(score -> score.getScore() == 0).count();
+        return total;
     }
 
     /*public Map<String, Object> getScoreDTO() {

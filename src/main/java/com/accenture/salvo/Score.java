@@ -75,12 +75,12 @@ public class Score {
         this.player = player;
     }
 
-    public Object getScoreDTO() {
-        Map<String,Object> scoreDTO = new LinkedHashMap<>();
-        scoreDTO.put("id", this.id);
-        scoreDTO.put("score", this.score);
-        scoreDTO.put("finish date", this.finishDate);
-        return scoreDTO;
+    public Object getPlayerScore() {
+        Map<String,Object> playerScoreDTO = new LinkedHashMap<>();
+        playerScoreDTO.put("game", this.id);
+        playerScoreDTO.put("score", this.score);
+        playerScoreDTO.put("finish date", this.finishDate);
+        return playerScoreDTO;
     }
 
 

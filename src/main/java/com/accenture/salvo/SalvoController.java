@@ -18,6 +18,8 @@ public class SalvoController {
     @Autowired
     GamePlayerRepository gamePlayerRepository;
 
+    @Autowired
+    PlayerRepository playerRepository;
 
     @RequestMapping("/game_view/{id}")
     public Object getGameById(@PathVariable("id") Long gamePlayerId) {
@@ -30,6 +32,13 @@ public class SalvoController {
     public Object getGameIds() {
         List<Game> games = gameRepository.findAll();
         return games.stream().map(Game::getGameDTO).collect(Collectors.toList());
+    }
+
+    @RequestMapping("/leaderBoard")
+    public List<Object> getLeaderBoard() {
+        List<Player> players = playerRepository.findAll();
+        List<Object> leaderBoard = players.stream().map(player -> player.getAllScoreDTO()).collect(Collectors.toList());
+        return leaderBoard;
     }
 
 }

@@ -23,6 +23,14 @@ public class Score {
 
     public Score(){}
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public Game getGame() {
         return game;
     }
@@ -37,14 +45,6 @@ public class Score {
 
     public void setPlayer(Player player) {
         this.player = player;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public double getScore() {
@@ -64,6 +64,8 @@ public class Score {
     }
 
     public Score(double score, Game game, Player player) {
+        this.player = player;
+        this.game = game;
         this.score = score;
         if (this.score != -1) {
             this.finishDate = game.getCreationDate();
@@ -71,8 +73,6 @@ public class Score {
         } else {
             this.finishDate = null;
         }
-        this.game = game;
-        this.player = player;
     }
 
     public Object getPlayerScore() {

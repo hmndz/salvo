@@ -20,6 +20,7 @@ public class Game {
     @OneToMany(mappedBy = "game", fetch = FetchType.EAGER)
     private Set<Score> scores = new HashSet<>();
 
+
     public long getId() {
         return this.id;
     }
@@ -49,13 +50,13 @@ public class Game {
     }
 
     @JsonIgnore
-    public Object getGamePlayersDTO() {
-        return this.gamePlayers.stream().map(gp -> gp.getGamePlayerDTO()).collect(Collectors.toList());
+    public List<Player> getPlayers(){
+        return this.gamePlayers.stream().map(p -> p.getPlayer()).collect(Collectors.toList());
     }
 
     @JsonIgnore
-    public List<Player> getPlayers(){
-        return this.gamePlayers.stream().map(p -> p.getPlayer()).collect(Collectors.toList());
+    public Object getGamePlayersDTO() {
+        return this.gamePlayers.stream().map(gp -> gp.getGamePlayerDTO()).collect(Collectors.toList());
     }
 
     public Object getGameSalvosDTO(){
@@ -73,7 +74,7 @@ public class Game {
     }
 
 }
-    /* test 3.1
+    /* test 3.2
         public Map<String,Object> getGamePViewDTO(List<Object> ships, List<Object> salvos) {
         Map<String,Object>  gameDTO = new LinkedHashMap<>();
         gameDTO.put("id", this.id);
@@ -81,6 +82,7 @@ public class Game {
         gameDTO.put("gamePlayers",gamePlayers.stream().map(gp -> gp.getGamePlayerDTO()).collect(Collectors.toList()));
         gameDTO.put("ships", ships);
         gameDTO.put("salvos", salvos);
+        gameDTO.put("scores", scores.stream().map(Score::getPlayerScore).collect((Collectors.toList())));
         return gameDTO;
     }*/
 

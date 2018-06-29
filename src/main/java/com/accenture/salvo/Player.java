@@ -58,10 +58,6 @@ public class Player {
         this.id = id;
     }
 
-    public List<Game> getGames(){
-        return this.gamePlayers.stream().map(game -> game.getGame()).collect(Collectors.toList());
-    }
-
     public Map<String, Object> getPlayerDTO() {
         Map<String,Object>  playerDTO = new LinkedHashMap<>();
         playerDTO.put("id", this.id);
@@ -71,24 +67,13 @@ public class Player {
 
     public Object getAllScoreDTO() {
         Map<String,Object> AllScoreDTO = new LinkedHashMap<>();
-
         AllScoreDTO.put("name", this.userName);
         AllScoreDTO.put("score", this.getScoreResumeDTO());
         return AllScoreDTO;
     }
 
-    private Object getScoreResumeDTO() {
-        Map<String,Object> scoreResume = new LinkedHashMap<>();
-        long totalWon = this.getWonGames();
-        double totalTie = this.getTiedGames();
-        double totalLost = this.getLostGames();
-        double totalTotal = scores.stream().filter(score -> score.getScore() != -1).mapToDouble(score -> score.getScore()).sum();
-
-        scoreResume.put("total", totalTotal);
-        scoreResume.put("won", totalWon);
-        scoreResume.put("lost", totalLost);
-        scoreResume.put("tied", totalTie);
-        return scoreResume;
+    public List<Game> getGames(){
+        return this.gamePlayers.stream().map(game -> game.getGame()).collect(Collectors.toList());
     }
 
     private long getWonGames() {
@@ -104,6 +89,20 @@ public class Player {
     private double getLostGames() {
         long total = scores.stream().filter(score -> score.getScore() == 0).count();
         return total;
+    }
+
+    private Object getScoreResumeDTO() {
+        Map<String,Object> scoreResume = new LinkedHashMap<>();
+        long totalWon = this.getWonGames();
+        double totalTie = this.getTiedGames();
+        double totalLost = this.getLostGames();
+        double totalTotal = scores.stream().filter(score ->
+                score.getScore() != -1).mapToDouble(score -> score.getScore()).sum();
+        scoreResume.put("total", totalTotal);
+        scoreResume.put("won", totalWon);
+        scoreResume.put("lost", totalLost);
+        scoreResume.put("tied", totalTie);
+        return scoreResume;
     }
 
     /*public Map<String, Object> getScoreDTO() {

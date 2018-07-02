@@ -95,9 +95,6 @@ public class GamePlayer {
         gamePlayerDTO.put("salvos", this.game.getGameSalvosDTO());
         return gamePlayerDTO;
     }
-
-
-
 }
 
 

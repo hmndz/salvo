@@ -104,13 +104,5 @@ public class Player {
         scoreResume.put("tied", totalTie);
         return scoreResume;
     }
-
-    /*public Map<String, Object> getScoreDTO() {
-        Map<String, Object> ScoreDTO = new LinkedHashMap<>();
-        ScoreDTO.put("name", this.getId());
-        ScoreDTO.put("score", this.getScores());
-    }*/
-
-
 }
 

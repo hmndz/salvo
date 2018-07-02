@@ -1,0 +1,53 @@
+.ship-piece{
+    background-color: none;
+    background-image: url(../images/Boat1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.ship-piece-hited{
+	background-color: none;
+    background-image: url(../images/boom2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    color: black;
+}
+
+.salvo{
+    background-image: url(../images/shot1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    color: white;
+}
+
+body{
+	background-image: url(../images/ship_background.jpg);
+}
+
+.radar{
+	width: 440px;
+	height: 440px;
+	background-image: url(../images/ocean.jpg);
+	background-position: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.battle{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+th, .fila{
+	background-color: purple;
+}
+
+.celda{
+	float: left;
+	width: 20px;
+	height: 20px;
+	border: solid 1px darkgray;
+}

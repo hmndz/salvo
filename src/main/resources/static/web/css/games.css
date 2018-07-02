@@ -1,3 +1,24 @@
 #user-panel{
     display:none;
 }
+
+body{
+    background-image: url(../images/ship_background.jpg);
+    background-size: 100%;
+}
+
+.table{
+    opacity: 0.6;
+}
+
+.list-group{
+    opacity: 0.8;
+}
+
+th, td{
+	opacity: 1;
+}
+
+.container{
+	margin-top: 30px;
+}

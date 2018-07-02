@@ -1,14 +1,24 @@
+body{
+	background-image: url(../images/ocean.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.radar{
+	width: 250px;
+	height: 250px;
+}
+
 .ship-piece{
-    background-color: darkslateblue;
+    background-color: none;
 }
 
 .ship-piece-hited{
     background-color: darkmagenta;
-    color: white;
+    color: none;
 }
 
 .salvo{
-    background-color: crimson;
-    color: white;
+    background-color: none;
+    color: none;
 }
-

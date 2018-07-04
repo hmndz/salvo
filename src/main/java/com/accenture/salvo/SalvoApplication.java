@@ -262,15 +262,18 @@ class WebSecurityConfig extends WebSecurityConfigurerAdapter{
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/rest/**").hasAuthority("ADMIN")
-                .antMatchers("/api/game_view").hasAuthority("USER")
+                .antMatchers("/api/game_view/**").hasAuthority("USER")
+                .antMatchers("/web/game.html").hasAuthority("USER")
+                .antMatchers("/api/**").permitAll()
                 .antMatchers("/web/**").permitAll()
-                .anyRequest().authenticated();
+                .anyRequest().hasAuthority("USER");
 
-        http.formLogin().usernameParameter("userName")
+        http.formLogin().usernameParameter("username")
                         .passwordParameter("password")
                         .loginPage("/api/login");
-        http.logout().logoutUrl("api/logout");
+
+        http.logout().logoutUrl("/api/logout");
+
 
         // turn off checking for CSRF tokens
         http.csrf().disable();

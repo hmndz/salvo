@@ -64,8 +64,8 @@ public class Game {
                 gp.getSalvos().stream().map(salvo -> salvo.getSalvoDTO())).collect(Collectors.toList());
     }
 
-    public Map<String,Object> getGameDTO() {
-        Map<String,Object>  gameDTO = new LinkedHashMap<>();
+    public Map <String,Object> getGameDTO() {
+        Map <String,Object>  gameDTO = new LinkedHashMap<>();
         gameDTO.put("id", this.id);
         gameDTO.put("created", this.creationDate);
         gameDTO.put("gamePlayers",gamePlayers.stream().map(gp -> gp.getGamePlayerDTO()).collect(Collectors.toList()));

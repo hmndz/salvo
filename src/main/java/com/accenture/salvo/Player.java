@@ -1,9 +1,5 @@
 package com.accenture.salvo;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.*;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -54,6 +50,10 @@ public class Player {
 
     public String getUserName(){
         return this.userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public void addGamePlayer(GamePlayer gamePlayer){

@@ -1,13 +1,12 @@
 package com.accenture.salvo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -35,17 +34,18 @@ public class SalvoController {
     }
 
     @RequestMapping(path = "/games", method = RequestMethod.GET)
-    public Object getGameId() {
+    public Object getGameId(Authentication authentication) {
         Map<String, Object> gamesDTO = new LinkedHashMap<>();
         List<Game> games = gameRepository.findAll();
         Player player = this.getAuthPlayer();
 
         if (player == null ) {
             gamesDTO.put("player", "Guest");
-            gamesDTO.put("games", games.stream().map(Game::getGameDTO).collect(Collectors.toList()));
         } else {
+
             gamesDTO.put("player", player.getPlayerDTO());
             gamesDTO.put("games", games.stream().map(Game::getGameDTO).collect(Collectors.toList()));
+
         }
         return gamesDTO;
     }
@@ -59,10 +59,32 @@ public class SalvoController {
         }
     }
 
+    private Object makeMap (String key, Object message){
+        Map<String, Object> makeMap = new LinkedHashMap<>();
+        makeMap.put(key, message);
+        return makeMap;
+    }
+
+    @RequestMapping(path = "/players", method = RequestMethod.POST)
+    public ResponseEntity <Object> newPlayer (@RequestParam String username, String password) {
+        if (username.isEmpty()) {
+            return new ResponseEntity<>(makeMap("error", "userName is empty"), HttpStatus.BAD_REQUEST);
+        }
+
+        Player player = playerRepository.findByUserName(username);
+        if (player != null) {
+            return new ResponseEntity<>(makeMap("error", "Name in use"), HttpStatus.CONFLICT);
+        }
+
+        playerRepository.save(new Player(username, password));
+        return new ResponseEntity<>(makeMap("error", "User created"), HttpStatus.CREATED);
+    }
+
     @RequestMapping("/leaderBoard")
     public List<Object> getLeaderBoard() {
         List<Player> score = playerRepository.findAll();
         return score.stream().map(player -> player.getAllScoreDTO()).collect(Collectors.toList());
+
     }
 
 }

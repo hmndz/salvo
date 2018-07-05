@@ -26,8 +26,8 @@ public class SalvoController {
     @Autowired
     PlayerRepository playerRepository;
 
-    @RequestMapping("/game_view/{id}")
-    public Object getGameById(@PathVariable("id") Long gamePlayerId) {
+    @RequestMapping("/game_view/{nn}")
+    public Object getGameById(@PathVariable("nn") Long gamePlayerId) {
         GamePlayer gamePlayer = gamePlayerRepository.findOne(gamePlayerId);
         return gamePlayer.getGamePlayerViewDTO();
 
@@ -45,7 +45,6 @@ public class SalvoController {
 
             gamesDTO.put("player", player.getPlayerDTO());
             gamesDTO.put("games", games.stream().map(Game::getGameDTO).collect(Collectors.toList()));
-
         }
         return gamesDTO;
     }

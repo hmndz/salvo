@@ -94,6 +94,13 @@ public class Player {
         return playerDTO;
     }
 
+    public Map<String, Object> getEmailDTO() {
+        Map<String,Object>  playerDTO = new LinkedHashMap<>();
+        playerDTO.put("id", this.id);
+        playerDTO.put("email", this.userName);
+        return playerDTO;
+    }
+
     public Object getAllScoreDTO() {
         Map<String,Object> AllScoreDTO = new LinkedHashMap<>();
         AllScoreDTO.put("name", this.userName);

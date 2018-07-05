@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.boot:spring-boot-starter-data-jpa:1.5.15.BUILD-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-jpa/1.5.15.BUILD-SNAPSHOT/1ca1c94a0897a0e170e2862c7ae74150b2530312/spring-boot-starter-data-jpa-1.5.15.BUILD-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-jpa/1.5.15.BUILD-SNAPSHOT/36c64cd5a0722e8e617b2200ce7738ed0f7d3f9b/spring-boot-starter-data-jpa-1.5.15.BUILD-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-jpa/1.5.15.BUILD-SNAPSHOT/47848269e842ce44e3790c171a99aa1a471bc28c/spring-boot-starter-data-jpa-1.5.15.BUILD-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-jpa/1.5.15.BUILD-SNAPSHOT/55c9f9c458df91c620265438c76c0af8c02d1bda/spring-boot-starter-data-jpa-1.5.15.BUILD-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-jpa/1.5.15.BUILD-SNAPSHOT/5615a9546a94f228d200e4bcacf449a1e3c5bfc2/spring-boot-starter-data-jpa-1.5.15.BUILD-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-jpa/1.5.15.BUILD-SNAPSHOT/5a9c2b1e16e4e87c6fc3b4e87cbe5945edd59bc8/spring-boot-starter-data-jpa-1.5.15.BUILD-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-jpa/1.5.15.BUILD-SNAPSHOT/d9646c2ce3b20e194599fab390444ed9ce52b40c/spring-boot-starter-data-jpa-1.5.15.BUILD-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

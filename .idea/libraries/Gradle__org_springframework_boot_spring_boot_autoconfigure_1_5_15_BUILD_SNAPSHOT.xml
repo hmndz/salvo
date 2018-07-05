@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.boot:spring-boot-autoconfigure:1.5.15.BUILD-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/1.5.15.BUILD-SNAPSHOT/60b895a73446558cc12bcec60dd1f9b4642526cf/spring-boot-autoconfigure-1.5.15.BUILD-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/1.5.15.BUILD-SNAPSHOT/565b07863971326ccaafde75bf4f01a84cd609a/spring-boot-autoconfigure-1.5.15.BUILD-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/1.5.15.BUILD-SNAPSHOT/56af3f52ce44dd5354a483748af24649615807c2/spring-boot-autoconfigure-1.5.15.BUILD-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/1.5.15.BUILD-SNAPSHOT/9956670ac194ac842e7a4010af085d34685d238b/spring-boot-autoconfigure-1.5.15.BUILD-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/1.5.15.BUILD-SNAPSHOT/a956a65056a26f90095c9eb5d99d349110afc378/spring-boot-autoconfigure-1.5.15.BUILD-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/1.5.15.BUILD-SNAPSHOT/b96e74fd427fc6a9b107ce57b20829cea5ca453d/spring-boot-autoconfigure-1.5.15.BUILD-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/1.5.15.BUILD-SNAPSHOT/c0e33df29f943f3dd37f03479b972170a0bd43ba/spring-boot-autoconfigure-1.5.15.BUILD-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

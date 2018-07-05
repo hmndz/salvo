@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.boot:spring-boot-test-autoconfigure:1.5.15.BUILD-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test-autoconfigure/1.5.15.BUILD-SNAPSHOT/4f014d20aec62eb13eea2b74faa715e27d78bd97/spring-boot-test-autoconfigure-1.5.15.BUILD-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test-autoconfigure/1.5.15.BUILD-SNAPSHOT/5ca9a90e9f8afdfa6a21de4ce7856ccc4e19d2d4/spring-boot-test-autoconfigure-1.5.15.BUILD-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test-autoconfigure/1.5.15.BUILD-SNAPSHOT/7c24abd4a2de416e40aecba1be5b66cfda24e66/spring-boot-test-autoconfigure-1.5.15.BUILD-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test-autoconfigure/1.5.15.BUILD-SNAPSHOT/9271272237277b499366f8e1ada0b58382c02c95/spring-boot-test-autoconfigure-1.5.15.BUILD-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test-autoconfigure/1.5.15.BUILD-SNAPSHOT/c5862ab67682781d512925d463fd0fa2270d6c98/spring-boot-test-autoconfigure-1.5.15.BUILD-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test-autoconfigure/1.5.15.BUILD-SNAPSHOT/d45cb324991c24d3de3f0113ed873108756e74cc/spring-boot-test-autoconfigure-1.5.15.BUILD-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test-autoconfigure/1.5.15.BUILD-SNAPSHOT/d6e9bf7933b807c6d347ea5b832b0f6413893f08/spring-boot-test-autoconfigure-1.5.15.BUILD-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

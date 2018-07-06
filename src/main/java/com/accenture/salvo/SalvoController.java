@@ -1,6 +1,5 @@
 package com.accenture.salvo;
 
-import ch.qos.logback.core.pattern.util.RegularEscapeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,8 +27,8 @@ public class SalvoController {
     PlayerRepository playerRepository;
 
 
-    @RequestMapping("/game_view/{nn}")
-    public Object getGameById(@PathVariable("nn") Long gamePlayerId) {
+    @RequestMapping("/game_view/{id}")
+    public Object getGameById(@PathVariable("id") Long gamePlayerId) {
         long authPlayerId = this.getAuthPlayer().getId();
         GamePlayer gamePlayer = gamePlayerRepository.findOne(gamePlayerId);
 
@@ -94,8 +93,8 @@ public class SalvoController {
 
 //Joining a game
 
-    @RequestMapping (path = "/game/{nn}/players", method = RequestMethod.POST)
-    public Object joinGame (@PathVariable("nn") Long gameId) {
+    @RequestMapping (path = "/game/{id}/players", method = RequestMethod.POST)
+    public Object joinGame (@PathVariable("id") Long gameId) {
         Player player = this.getAuthPlayer();
         if (player == null) {
             return new ResponseEntity<>(this.getMapDTO("error", "Login first good Sir"), HttpStatus.UNAUTHORIZED);

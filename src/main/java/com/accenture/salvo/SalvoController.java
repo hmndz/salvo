@@ -31,25 +31,11 @@ public class SalvoController {
     public Object getGameById(@PathVariable("id") Long gamePlayerId) {
         long authPlayerId = this.getAuthPlayer().getId();
         GamePlayer gamePlayer = gamePlayerRepository.findOne(gamePlayerId);
-        if (gamePlayer.getPlayer().getId() == authPlayerId) {
+
+        if (gamePlayer.getPlayer().getId() ==  authPlayerId) {
             return gamePlayer.getGamePlayerViewDTO();
         } else {
             return new ResponseEntity<>(this.getMapDTO("error", "UNAUTHORIZED"), HttpStatus.UNAUTHORIZED);
-        }
-    }
-
-    private Object getMapDTO (String key, Object message){
-        Map<String, Object> MapDTO = new LinkedHashMap<>();
-        MapDTO.put(key, message);
-        return MapDTO;
-    }
-
-    private Player getAuthPlayer() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (authentication == null || authentication instanceof AnonymousAuthenticationToken) {
-            return null;
-        } else {
-            return playerRepository.findByUserName(authentication.getName());
         }
     }
 
@@ -58,19 +44,21 @@ public class SalvoController {
         Map<String, Object> gamesDTO = new LinkedHashMap<>();
         List<Game> games = gameRepository.findAll();
         Player player = this.getAuthPlayer();
-        if (player == null) {
+
+        if (player == null ) {
             gamesDTO.put("player", "Guest");
         } else {
             gamesDTO.put("player", player.getPlayerDTO());
-        }
+                   }
         gamesDTO.put("games", games.stream().map(Game::getGameDTO).collect(Collectors.toList()));
         return gamesDTO;
     }
 
     @RequestMapping(path = "/players", method = RequestMethod.POST)
-    public ResponseEntity<Object> newPlayer(@RequestParam String username, String password) {
+    public ResponseEntity <Object> newPlayer (@RequestParam String username,
+                                              String password) {
         if (username.isEmpty()) {
-            return new ResponseEntity<>(this.getMapDTO("error", "userName is empty"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(this.getMapDTO("error", "UserName is empty"), HttpStatus.BAD_REQUEST);
         }
 
         Player player = playerRepository.findByUserName(username);
@@ -89,11 +77,25 @@ public class SalvoController {
         return leaderBoard;
 
     }
-}
 
-   // -------------------------------------------------------------
+    @RequestMapping (path = "/games", method = RequestMethod.POST)
+    public Object createGame () {
+        Player authPlayer = this.getAuthPlayer();
+        if (authPlayer == null) {
+            return new ResponseEntity<>(this.getMapDTO("Error", "Not logged in"), HttpStatus.UNAUTHORIZED);
+        } else {
+            Game game = new Game();
+            GamePlayer gamePlayer = new GamePlayer(authPlayer, game);
+            gameRepository.save(game);
+            gamePlayerRepository.save(gamePlayer);
+            return this.createRespEntity("gpId", gamePlayer.getId(), HttpStatus.CREATED);
+        }
+    }
 
-    /*private Object getMapDTO (String key, Object message){
+
+    // -------------------------------------------------------------
+
+    private Object getMapDTO (String key, Object message){
         Map<String, Object> MapDTO = new LinkedHashMap<>();
         MapDTO.put(key, message);
         return MapDTO;
@@ -108,10 +110,11 @@ public class SalvoController {
         }
     }
 
-    private ResponseEntity<Object> createResponseEntity (String tipoDeRespuesta, Object valor, HttpStatus httpStatus ) {
-        Map<String,Object> responseMap = new LinkedHashMap<>();
-        responseMap.put(tipoDeRespuesta, valor);
-        return new ResponseEntity<>(responseMap, httpStatus);
+    private ResponseEntity<Object> createRespEntity (String response, Object value,
+                                                     HttpStatus httpStatus ) {
+        Map<String,Object> respMap = new LinkedHashMap<>();
+        respMap.put(response, value);
+        return new ResponseEntity<>(respMap, httpStatus);
     }
 
 

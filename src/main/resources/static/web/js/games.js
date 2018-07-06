@@ -112,7 +112,7 @@ $('#createGame').on('submit', function (event) {
         .done(function (data) {
             console.log(data);
             console.log("game created");
-            gameViewUrl = "/web/game.html?gp=" + data.gpid;
+            gameViewUrl = "/web/game.html?gp=" + data.gpId;
             $('#gameCreatedSuccess').show("slow").delay(2000).hide("slow");
             setTimeout(
                 function()

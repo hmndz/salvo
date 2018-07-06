@@ -1,5 +1,6 @@
 package com.accenture.salvo;
 
+import ch.qos.logback.core.pattern.util.RegularEscapeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,8 +28,8 @@ public class SalvoController {
     PlayerRepository playerRepository;
 
 
-    @RequestMapping("/game_view/{id}")
-    public Object getGameById(@PathVariable("id") Long gamePlayerId) {
+    @RequestMapping("/game_view/{nn}")
+    public Object getGameById(@PathVariable("nn") Long gamePlayerId) {
         long authPlayerId = this.getAuthPlayer().getId();
         GamePlayer gamePlayer = gamePlayerRepository.findOne(gamePlayerId);
 
@@ -77,6 +78,7 @@ public class SalvoController {
         return leaderBoard;
 
     }
+//Create a new game
 
     @RequestMapping (path = "/games", method = RequestMethod.POST)
     public Object createGame () {
@@ -84,14 +86,32 @@ public class SalvoController {
         if (authPlayer == null) {
             return new ResponseEntity<>(this.getMapDTO("Error", "Not logged in"), HttpStatus.UNAUTHORIZED);
         } else {
-            Game game = new Game();
-            GamePlayer gamePlayer = new GamePlayer(authPlayer, game);
-            gameRepository.save(game);
+            GamePlayer gamePlayer = new GamePlayer(authPlayer, gameRepository.save(new Game()));
             gamePlayerRepository.save(gamePlayer);
-            return this.createRespEntity("gpId", gamePlayer.getId(), HttpStatus.CREATED);
+            return this.createRespEntity("gpid", gamePlayer.getId(), HttpStatus.CREATED);
         }
     }
 
+//Joining a game
+
+    @RequestMapping (path = "/game/{nn}/players", method = RequestMethod.POST)
+    public Object joinGame (@PathVariable("nn") Long gameId) {
+        Player player = this.getAuthPlayer();
+        if (player == null) {
+            return new ResponseEntity<>(this.getMapDTO("error", "Login first good Sir"), HttpStatus.UNAUTHORIZED);
+        }
+        Game game = gameRepository.findOne(gameId);
+        if (game == null) {
+            return new ResponseEntity<>(this.getMapDTO("error", "Invalid gameId"), HttpStatus.FORBIDDEN);
+        }
+        if (game.maxGamePlayers() == 2) {
+            return new ResponseEntity<>(this.getMapDTO("error", "Game Full"), HttpStatus.FORBIDDEN);
+        }
+        GamePlayer gamePlayer = new GamePlayer(player, game);
+        gamePlayerRepository.save(gamePlayer);
+        return new ResponseEntity<>(this.getMapDTO("gpid", gamePlayer.getId()), HttpStatus.CREATED);
+
+    }
 
     // -------------------------------------------------------------
 

@@ -110,7 +110,7 @@ public class SalvoController {
         }
     }
 
-    private ResponseEntity<Object> createRespEntity (String response, Object value,
+    private ResponseEntity <Object> createRespEntity (String response, Object value,
                                                      HttpStatus httpStatus ) {
         Map<String,Object> respMap = new LinkedHashMap<>();
         respMap.put(response, value);

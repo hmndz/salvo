@@ -59,6 +59,10 @@ public class GamePlayer {
         this.ships.add(ship);
     }
 
+    public boolean hasNoShips() {
+        return this.ships.isEmpty();
+    }
+
     public Set<Salvo> getSalvos() {
         return this.salvos;
     }

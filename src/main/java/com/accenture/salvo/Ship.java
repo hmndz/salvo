@@ -36,6 +36,10 @@ public class Ship {
         this.locations = locations;
     }
 
+    public List<String> getLocations() {
+        return this.locations;
+    }
+
 
     public Ship(String shipType, GamePlayer gamePlayer, List<String> locations) {
         this.shipType = shipType;

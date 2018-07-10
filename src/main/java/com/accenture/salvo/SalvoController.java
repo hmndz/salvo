@@ -38,7 +38,7 @@ public class SalvoController {
         long authPlayerId = this.getAuthPlayer().getId();
         GamePlayer gamePlayer = gamePlayerRepository.findOne(gamePlayerId);
 
-        if (gamePlayer.getPlayer().getId() ==  authPlayerId) {
+        if (gamePlayer.getPlayer().getId() == authPlayerId) {
             return gamePlayer.getGamePlayerViewDTO();
         } else {
             return new ResponseEntity<>(this.getMapDTO("error", "UNAUTHORIZED"), HttpStatus.UNAUTHORIZED);
@@ -46,23 +46,23 @@ public class SalvoController {
     }
 
     @RequestMapping(path = "/games", method = RequestMethod.GET)
-    public Object getGameIds () {
+    public Object getGameIds() {
         Map<String, Object> gamesDTO = new LinkedHashMap<>();
         List<Game> games = gameRepository.findAll();
         Player player = this.getAuthPlayer();
 
-        if (player == null ) {
+        if (player == null) {
             gamesDTO.put("player", "Guest");
         } else {
             gamesDTO.put("player", player.getPlayerDTO());
-                   }
+        }
         gamesDTO.put("games", games.stream().map(Game::getGameDTO).collect(Collectors.toList()));
         return gamesDTO;
     }
 
     @RequestMapping(path = "/players", method = RequestMethod.POST)
-    public ResponseEntity <Object> newPlayer (@RequestParam String username,
-                                              String password) {
+    public ResponseEntity<Object> newPlayer(@RequestParam String username,
+                                            String password) {
         if (username.isEmpty()) {
             return new ResponseEntity<>(this.getMapDTO("error", "UserName is empty"), HttpStatus.BAD_REQUEST);
         }
@@ -85,8 +85,8 @@ public class SalvoController {
     }
 //Create a new game
 
-    @RequestMapping (path = "/games", method = RequestMethod.POST)
-    public Object createGame () {
+    @RequestMapping(path = "/games", method = RequestMethod.POST)
+    public Object createGame() {
         Player authPlayer = this.getAuthPlayer();
         if (authPlayer == null) {
             return new ResponseEntity<>(this.getMapDTO("Error", "Not logged in"), HttpStatus.UNAUTHORIZED);
@@ -99,8 +99,8 @@ public class SalvoController {
 
 //Joining a game
 
-    @RequestMapping (path = "/game/{id}/players", method = RequestMethod.POST)
-    public Object joinGame (@PathVariable("id") Long gameId) {
+    @RequestMapping(path = "/game/{id}/players", method = RequestMethod.POST)
+    public Object joinGame(@PathVariable("id") Long gameId) {
         Player player = this.getAuthPlayer();
         if (player == null) {
             return new ResponseEntity<>(this.getMapDTO("error", "Login first good Sir"), HttpStatus.UNAUTHORIZED);
@@ -121,7 +121,7 @@ public class SalvoController {
 // Getting Ships
 
     @RequestMapping(path = "/games/players/{gamePlayerId}/ships", method = RequestMethod.GET)
-    public Object getShip (@PathVariable ("gamePlayerId") long gpId) {
+    public Object getShip(@PathVariable("gamePlayerId") long gpId) {
         Map<String, Object> playerShips = new LinkedHashMap<>();
         GamePlayer gamePlayer = gamePlayerRepository.findOne(gpId);
         Player player = getAuthPlayer();
@@ -131,32 +131,17 @@ public class SalvoController {
         if (gamePlayer == null) {
             return this.createRespEntity("error", " 404 Information not found", HttpStatus.NOT_FOUND);
         }
-        playerShips.put("ships", gamePlayer.getGamePlayerShipsDTO());
+        playerShips.put("ships", gamePlayer.getGPlayerShipsDTO());
         playerShips.put("gpid", gamePlayer.getId());
         return playerShips;
     }
 
 // Setting Ships
 
-    @RequestMapping(path="/games/players/{gamePlayerId}/ships", method = RequestMethod.POST)
-    public Object setShipsLocations(@PathVariable("gamePlayerId") long gpId, @RequestBody List<Ship> ships) {
-        Player authenticatedPlayer = getAuthPlayer();
 
-        if (authenticatedPlayer == null) {
-            return this.createRespEntity("error", "Not logged in", HttpStatus.UNAUTHORIZED);
-        }
 
-        GamePlayer gamePlayer = gamePlayerRepository.findOne(gpId);
-        if (gamePlayer == null) {
-            return this.createRespEntity("error", "Can not access the game", HttpStatus.NOT_FOUND);
-        }
 
-        if (authenticatedPlayer.getId() != gamePlayer.getPlayer().getId()) {
-            return this.createRespEntity("error", "Can not add ships", HttpStatus.UNAUTHORIZED);
-        }
 
-            return this.createRespEntity("message", "Ships added", HttpStatus.CREATED);
-        }
 
 
     // -------------------------------------------------------------

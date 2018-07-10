@@ -67,7 +67,7 @@ public class GamePlayer {
         return this.salvos;
     }
 
-    public List<Object> getGamePlayerShipsDTO() {
+    public List<Object> getGPlayerShipsDTO() {
         return this.ships.stream().map(ship -> ship.getShipDTO()).collect(Collectors.toList());
     }
 
@@ -95,7 +95,7 @@ public class GamePlayer {
         gamePlayerDTO.put("id", this.game.getId());
         gamePlayerDTO.put("created", this.game.getCreationDate());
         gamePlayerDTO.put("gamePlayers", this.game.getGamePlayersDTO());
-        gamePlayerDTO.put("ships", this.getGamePlayerShipsDTO());
+        gamePlayerDTO.put("ships", this.getGPlayerShipsDTO());
         gamePlayerDTO.put("salvos", this.game.getGameSalvosDTO());
         return gamePlayerDTO;
     }

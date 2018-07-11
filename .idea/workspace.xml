@@ -55,33 +55,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SalvoController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/accenture/salvo/SalvoController.java">
+      <file leaf-file-name="game.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/js/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2040">
-              <caret line="153" column="17" lean-forward="true" selection-start-line="153" selection-start-column="17" selection-end-line="153" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="124">
+              <caret line="141" column="5" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GamePlayer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="games.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/js/games.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="181" column="47" lean-forward="true" selection-start-line="181" selection-start-column="47" selection-end-line="181" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GamePlayer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/accenture/salvo/GamePlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+            <state relative-caret-position="203">
+              <caret line="62" column="36" lean-forward="true" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1020#1021#0" expanded="true" />
                 <element signature="e#1054#1055#0" expanded="true" />
+                <element signature="e#1347#1348#0" expanded="true" />
+                <element signature="e#1383#1384#0" expanded="true" />
+                <element signature="e#1420#1421#0" expanded="true" />
+                <element signature="e#1463#1464#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>salvos</find>
+      <find>salvoes</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -454,6 +470,9 @@
       </map>
     </option>
   </component>
+  <component name="HierarchyBrowserManager">
+    <option name="SCOPE" value="All" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -462,12 +481,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/accenture/salvo/SalvoApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/accenture/salvo/Ship.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/web/js/shipPlacement.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/accenture/salvo/SalvoController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/accenture/salvo/GamePlayer.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/web/js/game.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/accenture/salvo/SalvoController.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-9" />
     <option name="width" value="746" />
     <option name="height" value="735" />
@@ -537,6 +557,16 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="salvo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="salvo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -673,7 +703,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -690,6 +720,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22012103" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24962178" />
       <window_info anchor="right" id="Gradle" order="3" weight="0.16187595" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -697,7 +728,6 @@
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -905,13 +935,6 @@
         <state relative-caret-position="-204" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/js/games.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2367">
-          <caret line="174" column="1" lean-forward="true" selection-start-line="174" selection-start-column="1" selection-end-line="174" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/js/gridstack.jQueryUI.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-867" />
@@ -936,13 +959,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/js/game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3791">
-          <caret line="289" selection-start-line="289" selection-end-line="289" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/accenture/salvo/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="830">
@@ -963,25 +979,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/accenture/salvo/GamePlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="62" column="36" lean-forward="true" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1020#1021#0" expanded="true" />
+            <element signature="e#1054#1055#0" expanded="true" />
+            <element signature="e#1347#1348#0" expanded="true" />
+            <element signature="e#1383#1384#0" expanded="true" />
+            <element signature="e#1420#1421#0" expanded="true" />
+            <element signature="e#1463#1464#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/js/games.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="181" column="47" lean-forward="true" selection-start-line="181" selection-start-column="47" selection-end-line="181" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/accenture/salvo/SalvoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="153" column="17" lean-forward="true" selection-start-line="153" selection-start-column="17" selection-end-line="153" selection-end-column="17" />
+        <state relative-caret-position="235">
+          <caret line="181" column="17" lean-forward="true" selection-start-line="181" selection-start-column="17" selection-end-line="181" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/accenture/salvo/GamePlayer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/js/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1020#1021#0" expanded="true" />
-            <element signature="e#1054#1055#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="124">
+          <caret line="141" column="5" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="5" />
         </state>
       </provider>
     </entry>

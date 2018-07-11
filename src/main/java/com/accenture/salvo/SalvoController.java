@@ -146,13 +146,17 @@ public class SalvoController {
     if (authPlayer == null) {
         return this.createRespEntity("error", "Not logged in", HttpStatus.UNAUTHORIZED);}
     GamePlayer selectedGamePlayer = gamePlayerRepository.findOne(gpId);
+
     if (selectedGamePlayer == null) {
-        return this.createRespEntity("error", "Can not access the game", HttpStatus.NOT_FOUND);}
+        return this.createRespEntity("error", "Can not access the game", HttpStatus.NOT_FOUND);
+    }
     if (authPlayer.getId() != selectedGamePlayer.getPlayer().getId()) {
-        return this.createRespEntity("error", "Unable to add ships ", HttpStatus.UNAUTHORIZED);}
+        return this.createRespEntity("error", "Unable to add ships ", HttpStatus.UNAUTHORIZED);
+    }
     if (selectedGamePlayer.withOutShips()) {
         shipList.forEach(ship -> {Ship newShip = new Ship(ship.getShipType(), selectedGamePlayer, ship.getShipLocations());
-            shipRepository.save(newShip); selectedGamePlayer.addShip(newShip);});
+            shipRepository.save(newShip); selectedGamePlayer.addShip(newShip);
+        });
         gamePlayerRepository.save(selectedGamePlayer);
         return this.createRespEntity("message", "Ships added", HttpStatus.CREATED);}
         else {
@@ -161,21 +165,23 @@ public class SalvoController {
 
 // Getting Salvos
 
-    @RequestMapping(path = "/games/players/{gamePlayerId}/salvoes", method = RequestMethod.GET)
+    @RequestMapping(path="/games/players/{gamePlayerId}/salvoes", method = RequestMethod.GET)
     public Object getSalvos(@PathVariable("gamePlayerId") long gpId) {
-        Map<String, Object> playerSalvos = new LinkedHashMap<>();
+        Map<String,Object> playerSalvos = new LinkedHashMap<>();
         GamePlayer gamePlayer = gamePlayerRepository.findOne(gpId);
         Player player = getAuthPlayer();
         if (player == null || (player.getId() != gamePlayer.getPlayer().getId())) {
-            return this.createRespEntity("error", "Seriously dude!? You're better than this!", HttpStatus.UNAUTHORIZED);
-        }
+            return this.createRespEntity("error", "Seriously dude!? You're better than this!", HttpStatus.FORBIDDEN);        }
         if (gamePlayer == null) {
-            return this.createRespEntity("error", " 404 Information not found", HttpStatus.NOT_FOUND);
-        }
-        playerSalvos.put("salvoes", gamePlayer.getSalvosDTO());
+            return this.createRespEntity("error", " 404 Information not found", HttpStatus.UNAUTHORIZED);}
         playerSalvos.put("gpid", gamePlayer.getId());
+        playerSalvos.put("salvoes", gamePlayer.getSalvosDTO());
         return playerSalvos;
     }
+
+// Setting Salvos
+
+
 
     // -------------------------------------------------------------
 

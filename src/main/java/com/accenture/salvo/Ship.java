@@ -8,17 +8,20 @@ public class Ship {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private String shipType;
+    public enum ShipType {AIRCRAFT_CARRIER , BATTLESHIP, SUBMARINE, DESTROYER, PATROL_BOAT}
+    private ShipType shipType;
+
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "gamePlayer_id")
     private GamePlayer gamePlayer;
 
     @ElementCollection
-    @Column(name="location")
-    private List<String> locations;
+    @Column(name="shipLocation")
+    private List<String> shipLocations;
 
     public Ship( ) {    }
+
 
     public GamePlayer getGamePlayer() {
         return this.gamePlayer;
@@ -28,29 +31,29 @@ public class Ship {
         this.gamePlayer = gamePlayer;
     }
 
-    public void setShipType(String shipType) {
-        this.shipType = shipType;
+    public void setShipLocations(List<String> shipLocations) {
+        this.shipLocations = shipLocations;
     }
 
-    public void setLocations(List<String> locations) {
-        this.locations = locations;
+    public List<String> getShipLocations() {
+        return this.shipLocations;
     }
 
-    public List<String> getLocations() {
-        return this.locations;
+    public ShipType getShipType() {
+        return this.shipType;
     }
 
-
-    public Ship(String shipType, GamePlayer gamePlayer, List<String> locations) {
+    public Ship(ShipType shipType, GamePlayer gamePlayer, List<String> shipLocations) {
         this.shipType = shipType;
         this.gamePlayer = gamePlayer;
-        this.locations = locations;
+        this.shipLocations = shipLocations;
     }
 
     public Map<String, Object> getShipDTO(){
         Map<String, Object> shipDTO = new LinkedHashMap<>();
         shipDTO.put("type", this.shipType);
-        shipDTO.put("locations", this.locations);
+        shipDTO.put("locations", this.shipLocations);
         return shipDTO;
     }
+
 }

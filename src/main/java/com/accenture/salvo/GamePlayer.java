@@ -59,7 +59,7 @@ public class GamePlayer {
         this.ships.add(ship);
     }
 
-    public boolean hasNoShips() {
+    public boolean withOutShips() {
         return this.ships.isEmpty();
     }
 

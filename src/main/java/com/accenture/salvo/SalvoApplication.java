@@ -115,39 +115,39 @@ public class SalvoApplication {
 
 //Ships
 
-                Ship ship1 = shipRepository.save(new Ship("Destroyer", gamePlayer1, ShipLocation1));
-                Ship ship2 = shipRepository.save(new Ship("Submarine", gamePlayer1, ShipLocation2));
-                Ship ship3 = shipRepository.save(new Ship("Patrol Boat", gamePlayer1, ShipLocation3));
-                Ship ship4 = shipRepository.save(new Ship("Destroyer", gamePlayer2, ShipLocation4));
-                Ship ship5 = shipRepository.save(new Ship("Patrol Boat", gamePlayer2, ShipLocation5));
+                Ship ship1 = shipRepository.save(new Ship(Ship.ShipType.DESTROYER, gamePlayer1, ShipLocation1));
+                Ship ship2 = shipRepository.save(new Ship(Ship.ShipType.SUBMARINE, gamePlayer1, ShipLocation2));
+                Ship ship3 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer1, ShipLocation3));
+                Ship ship4 = shipRepository.save(new Ship(Ship.ShipType.DESTROYER, gamePlayer2, ShipLocation4));
+                Ship ship5 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer2, ShipLocation5));
 
-                Ship ship6 = shipRepository.save(new Ship("Destroyer", gamePlayer2, ShipLocation6));
-                Ship ship7 = shipRepository.save(new Ship("Patrol Boat", gamePlayer2, ShipLocation7));
-                Ship ship8 = shipRepository.save(new Ship("Submarine", gamePlayer3, ShipLocation8));
-                Ship ship9 = shipRepository.save(new Ship("Patrol Boat", gamePlayer3, ShipLocation9));
+                Ship ship6 = shipRepository.save(new Ship(Ship.ShipType.DESTROYER, gamePlayer2, ShipLocation6));
+                Ship ship7 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer2, ShipLocation7));
+                Ship ship8 = shipRepository.save(new Ship(Ship.ShipType.SUBMARINE, gamePlayer3, ShipLocation8));
+                Ship ship9 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer3, ShipLocation9));
 
-                Ship ship10 = shipRepository.save(new Ship("Destroyer", gamePlayer4, ShipLocation10));
-                Ship ship11 = shipRepository.save(new Ship("Patrol Boat", gamePlayer4, ShipLocation11));
-                Ship ship12 = shipRepository.save(new Ship("Submarine", gamePlayer5, ShipLocation12));
-                Ship ship13 = shipRepository.save(new Ship("Patrol Boat", gamePlayer5, ShipLocation13));
+                Ship ship10 = shipRepository.save(new Ship(Ship.ShipType.DESTROYER, gamePlayer4, ShipLocation10));
+                Ship ship11 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer4, ShipLocation11));
+                Ship ship12 = shipRepository.save(new Ship(Ship.ShipType.SUBMARINE, gamePlayer5, ShipLocation12));
+                Ship ship13 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer5, ShipLocation13));
 
-                Ship ship14 = shipRepository.save(new Ship("Destroyer", gamePlayer6, ShipLocation10));
-                Ship ship15 = shipRepository.save(new Ship("Patrol Boat", gamePlayer6, ShipLocation11));
-                Ship ship16 = shipRepository.save(new Ship("Submarine", gamePlayer7, ShipLocation12));
-                Ship ship17 = shipRepository.save(new Ship("Patrol Boat", gamePlayer7, ShipLocation13));
+                Ship ship14 = shipRepository.save(new Ship(Ship.ShipType.DESTROYER, gamePlayer6, ShipLocation10));
+                Ship ship15 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer6, ShipLocation11));
+                Ship ship16 = shipRepository.save(new Ship(Ship.ShipType.SUBMARINE, gamePlayer7, ShipLocation12));
+                Ship ship17 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer7, ShipLocation13));
 
-                Ship ship18 = shipRepository.save(new Ship("Destroyer", gamePlayer8, ShipLocation10));
-                Ship ship19 = shipRepository.save(new Ship("Patrol Boat", gamePlayer8, ShipLocation11));
-                Ship ship20 = shipRepository.save(new Ship("Submarine", gamePlayer9, ShipLocation12));
-                Ship ship21 = shipRepository.save(new Ship("Patrol Boat", gamePlayer9, ShipLocation13));
+                Ship ship18 = shipRepository.save(new Ship(Ship.ShipType.DESTROYER, gamePlayer8, ShipLocation10));
+                Ship ship19 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer8, ShipLocation11));
+                Ship ship20 = shipRepository.save(new Ship(Ship.ShipType.SUBMARINE, gamePlayer9, ShipLocation12));
+                Ship ship21 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer9, ShipLocation13));
 
-                Ship ship22 = shipRepository.save(new Ship("Destroyer", gamePlayer10, ShipLocation10));
-                Ship ship23 = shipRepository.save(new Ship("Patrol Boat", gamePlayer10, ShipLocation11));
+                Ship ship22 = shipRepository.save(new Ship(Ship.ShipType.DESTROYER, gamePlayer10, ShipLocation10));
+                Ship ship23 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer10, ShipLocation11));
 
-                Ship ship24 = shipRepository.save(new Ship("Destroyer", gamePlayer12, ShipLocation10));
-                Ship ship25 = shipRepository.save(new Ship("Patrol Boat", gamePlayer12, ShipLocation11));
-                Ship ship26 = shipRepository.save(new Ship("Submarine", gamePlayer13, ShipLocation12));
-                Ship ship27 = shipRepository.save(new Ship("Patrol Boat", gamePlayer13, ShipLocation13));
+                Ship ship24 = shipRepository.save(new Ship(Ship.ShipType.DESTROYER, gamePlayer12, ShipLocation10));
+                Ship ship25 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer12, ShipLocation11));
+                Ship ship26 = shipRepository.save(new Ship(Ship.ShipType.SUBMARINE, gamePlayer13, ShipLocation12));
+                Ship ship27 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer13, ShipLocation13));
 
 
 
@@ -262,15 +262,12 @@ class WebSecurityConfig extends WebSecurityConfigurerAdapter{
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
+                .antMatchers("/api/game_view/**").hasAuthority("USER")
                 .antMatchers("/web/game.html").hasAuthority("USER")
-                .antMatchers("/web/games.html").permitAll()
-                .antMatchers("/**/js/**").permitAll()
-                .antMatchers("/**/css/**").permitAll()
-                .antMatchers("/**/img/**").permitAll()
-                .antMatchers("/api/leaderBoard").permitAll()
-                .antMatchers("/api/games").permitAll()
-                .antMatchers("/api/**").hasAuthority("USER")
-                .anyRequest().fullyAuthenticated();
+                .antMatchers("/api/**").permitAll()
+                .antMatchers("/rest/**").permitAll()
+                .antMatchers("/web/**").permitAll()
+                .anyRequest().hasAuthority("USER");
 
         http.formLogin().usernameParameter("username")
                         .passwordParameter("password")

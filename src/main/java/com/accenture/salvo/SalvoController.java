@@ -151,7 +151,7 @@ public class SalvoController {
     if (authPlayer.getId() != selectedGamePlayer.getPlayer().getId()) {
         return this.createRespEntity("error", "Unable to add ships ", HttpStatus.UNAUTHORIZED);}
     if (selectedGamePlayer.withOutShips()) {
-        shipList.stream().forEach(ship -> {Ship newShip = new Ship(ship.getShipType(), selectedGamePlayer, ship.getShipLocations());
+        shipList.forEach(ship -> {Ship newShip = new Ship(ship.getShipType(), selectedGamePlayer, ship.getShipLocations());
             shipRepository.save(newShip); selectedGamePlayer.addShip(newShip);});
         gamePlayerRepository.save(selectedGamePlayer);
         return this.createRespEntity("message", "Ships added", HttpStatus.CREATED);}
@@ -176,7 +176,6 @@ public class SalvoController {
         playerSalvos.put("gpid", gamePlayer.getId());
         return playerSalvos;
     }
-
 
     // -------------------------------------------------------------
 

@@ -115,39 +115,39 @@ public class SalvoApplication {
 
 //Ships
 
-                Ship ship1 = shipRepository.save(new Ship(Ship.ShipType.DESTROYER, gamePlayer1, ShipLocation1));
-                Ship ship2 = shipRepository.save(new Ship(Ship.ShipType.SUBMARINE, gamePlayer1, ShipLocation2));
-                Ship ship3 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer1, ShipLocation3));
-                Ship ship4 = shipRepository.save(new Ship(Ship.ShipType.DESTROYER, gamePlayer2, ShipLocation4));
-                Ship ship5 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer2, ShipLocation5));
+                Ship ship1 = shipRepository.save(new Ship(Ship.ShipType.destroyer, gamePlayer1, ShipLocation1));
+                Ship ship2 = shipRepository.save(new Ship(Ship.ShipType.submarine, gamePlayer1, ShipLocation2));
+                Ship ship3 = shipRepository.save(new Ship(Ship.ShipType.patrolboat, gamePlayer1, ShipLocation3));
+                Ship ship4 = shipRepository.save(new Ship(Ship.ShipType.destroyer, gamePlayer2, ShipLocation4));
+                Ship ship5 = shipRepository.save(new Ship(Ship.ShipType.patrolboat, gamePlayer2, ShipLocation5));
 
-                Ship ship6 = shipRepository.save(new Ship(Ship.ShipType.DESTROYER, gamePlayer2, ShipLocation6));
-                Ship ship7 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer2, ShipLocation7));
-                Ship ship8 = shipRepository.save(new Ship(Ship.ShipType.SUBMARINE, gamePlayer3, ShipLocation8));
-                Ship ship9 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer3, ShipLocation9));
+                Ship ship6 = shipRepository.save(new Ship(Ship.ShipType.destroyer, gamePlayer2, ShipLocation6));
+                Ship ship7 = shipRepository.save(new Ship(Ship.ShipType.patrolboat, gamePlayer2, ShipLocation7));
+                Ship ship8 = shipRepository.save(new Ship(Ship.ShipType.submarine, gamePlayer3, ShipLocation8));
+                Ship ship9 = shipRepository.save(new Ship(Ship.ShipType.patrolboat, gamePlayer3, ShipLocation9));
 
-                Ship ship10 = shipRepository.save(new Ship(Ship.ShipType.DESTROYER, gamePlayer4, ShipLocation10));
-                Ship ship11 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer4, ShipLocation11));
-                Ship ship12 = shipRepository.save(new Ship(Ship.ShipType.SUBMARINE, gamePlayer5, ShipLocation12));
-                Ship ship13 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer5, ShipLocation13));
+                Ship ship10 = shipRepository.save(new Ship(Ship.ShipType.destroyer, gamePlayer4, ShipLocation10));
+                Ship ship11 = shipRepository.save(new Ship(Ship.ShipType.patrolboat, gamePlayer4, ShipLocation11));
+                Ship ship12 = shipRepository.save(new Ship(Ship.ShipType.submarine, gamePlayer5, ShipLocation12));
+                Ship ship13 = shipRepository.save(new Ship(Ship.ShipType.patrolboat, gamePlayer5, ShipLocation13));
 
-                Ship ship14 = shipRepository.save(new Ship(Ship.ShipType.DESTROYER, gamePlayer6, ShipLocation10));
-                Ship ship15 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer6, ShipLocation11));
-                Ship ship16 = shipRepository.save(new Ship(Ship.ShipType.SUBMARINE, gamePlayer7, ShipLocation12));
-                Ship ship17 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer7, ShipLocation13));
+                Ship ship14 = shipRepository.save(new Ship(Ship.ShipType.destroyer, gamePlayer6, ShipLocation10));
+                Ship ship15 = shipRepository.save(new Ship(Ship.ShipType.patrolboat, gamePlayer6, ShipLocation11));
+                Ship ship16 = shipRepository.save(new Ship(Ship.ShipType.submarine, gamePlayer7, ShipLocation12));
+                Ship ship17 = shipRepository.save(new Ship(Ship.ShipType.patrolboat, gamePlayer7, ShipLocation13));
 
-                Ship ship18 = shipRepository.save(new Ship(Ship.ShipType.DESTROYER, gamePlayer8, ShipLocation10));
-                Ship ship19 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer8, ShipLocation11));
-                Ship ship20 = shipRepository.save(new Ship(Ship.ShipType.SUBMARINE, gamePlayer9, ShipLocation12));
-                Ship ship21 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer9, ShipLocation13));
+                Ship ship18 = shipRepository.save(new Ship(Ship.ShipType.destroyer, gamePlayer8, ShipLocation10));
+                Ship ship19 = shipRepository.save(new Ship(Ship.ShipType.patrolboat, gamePlayer8, ShipLocation11));
+                Ship ship20 = shipRepository.save(new Ship(Ship.ShipType.submarine, gamePlayer9, ShipLocation12));
+                Ship ship21 = shipRepository.save(new Ship(Ship.ShipType.patrolboat, gamePlayer9, ShipLocation13));
 
-                Ship ship22 = shipRepository.save(new Ship(Ship.ShipType.DESTROYER, gamePlayer10, ShipLocation10));
-                Ship ship23 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer10, ShipLocation11));
+                Ship ship22 = shipRepository.save(new Ship(Ship.ShipType.destroyer, gamePlayer10, ShipLocation10));
+                Ship ship23 = shipRepository.save(new Ship(Ship.ShipType.submarine, gamePlayer10, ShipLocation11));
 
-                Ship ship24 = shipRepository.save(new Ship(Ship.ShipType.DESTROYER, gamePlayer12, ShipLocation10));
-                Ship ship25 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer12, ShipLocation11));
-                Ship ship26 = shipRepository.save(new Ship(Ship.ShipType.SUBMARINE, gamePlayer13, ShipLocation12));
-                Ship ship27 = shipRepository.save(new Ship(Ship.ShipType.PATROL_BOAT, gamePlayer13, ShipLocation13));
+                Ship ship24 = shipRepository.save(new Ship(Ship.ShipType.destroyer, gamePlayer12, ShipLocation10));
+                Ship ship25 = shipRepository.save(new Ship(Ship.ShipType.patrolboat, gamePlayer12, ShipLocation11));
+                Ship ship26 = shipRepository.save(new Ship(Ship.ShipType.submarine, gamePlayer13, ShipLocation12));
+                Ship ship27 = shipRepository.save(new Ship(Ship.ShipType.patrolboat, gamePlayer13, ShipLocation13));
 
 
 

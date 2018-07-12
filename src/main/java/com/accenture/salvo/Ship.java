@@ -8,7 +8,7 @@ public class Ship {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    public enum ShipType {AIRCRAFT_CARRIER , BATTLESHIP, SUBMARINE, DESTROYER, PATROL_BOAT}
+    public enum ShipType {carrier , battleship, submarine, destroyer, patrolboat}
     private ShipType shipType;
 
 
@@ -51,8 +51,8 @@ public class Ship {
 
     public Map<String, Object> getShipDTO(){
         Map<String, Object> shipDTO = new LinkedHashMap<>();
-        shipDTO.put("type", this.shipType);
-        shipDTO.put("locations", this.shipLocations);
+        shipDTO.put("shipType", this.shipType);
+        shipDTO.put("shipLocations", this.shipLocations);
         return shipDTO;
     }
 

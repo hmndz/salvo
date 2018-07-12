@@ -50,11 +50,6 @@ public class Game {
     }
 
 
-    public long maxGamePlayers() {
-        return this.scores.stream().count();
-    }
-
-
     @JsonIgnore
     public List<Player> getPlayers(){
         return this.gamePlayers.stream().map(p -> p.getPlayer()).collect(Collectors.toList());

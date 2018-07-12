@@ -96,7 +96,7 @@ public class Player {
 
     public Object getAllScoreDTO() {
         Map<String,Object> AllScoreDTO = new LinkedHashMap<>();
-        AllScoreDTO.put("name", this.userName);
+        AllScoreDTO.put("email", this.userName);
         AllScoreDTO.put("score", this.getScoreResumeDTO());
         return AllScoreDTO;
     }

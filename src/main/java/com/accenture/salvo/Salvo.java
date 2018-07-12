@@ -46,6 +46,13 @@ public class Salvo {
         return salvoLocations;
     }
 
+    public boolean checkLocations(List <String> salvoLocations) {
+        for (String location: salvoLocations) {
+            if (this.salvoLocations.contains(location)) {
+                return true;}}
+        return false;
+    }
+
     public Salvo(int turn , GamePlayer gamePlayer, List<String> locations) {
         this.turn = turn;
         this.gamePlayer = gamePlayer;

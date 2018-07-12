@@ -59,6 +59,10 @@ public class GamePlayer {
         this.ships.add(ship);
     }
 
+    public void addSalvos(Salvo salvo) {
+        this.salvos.add(salvo);
+    }
+
     public boolean withOutShips() {
         return this.ships.isEmpty();
     }
@@ -73,6 +77,13 @@ public class GamePlayer {
 
     public Object getSalvosDTO() {
         return this.salvos.stream().map(sal -> sal.getSalvoDTO()).collect(Collectors.toList());
+    }
+
+    public boolean notPermittedSalvo(List <String> salvoLocations) {
+        for (Salvo salvo: this.salvos) {
+            if (salvo.checkLocations(salvoLocations)) {
+                return true;}}
+        return false;
     }
 
     public GamePlayer(Player player, Game game) {

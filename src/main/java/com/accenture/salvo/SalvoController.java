@@ -160,14 +160,6 @@ public class SalvoController {
         }
     }
 
-    /*if (gamePlayer.permittedSalvo()){
-    gamePlayer.addSalvos(salvos);
-    gamePlayerRepository.save(gamePlayer);
-    return this.createRespEntity("Notification", "Salvos Added", HttpStatus.CREATED);
-        } else {
-            return this.createRespEntity("error", "Salvos already added", HttpStatus.FORBIDDEN);
-        }*/
-
 // Getting Salvos
 
     @RequestMapping(path = "/games/players/{gamePlayerID}/salvoes", method = RequestMethod.GET)

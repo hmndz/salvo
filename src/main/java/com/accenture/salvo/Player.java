@@ -96,22 +96,22 @@ public class Player {
 
     public Object getAllScoreDTO() {
         Map<String,Object> AllScoreDTO = new LinkedHashMap<>();
-        AllScoreDTO.put("email", this.userName);
+        AllScoreDTO.put("name", this.userName);
         AllScoreDTO.put("score", this.getScoreResumeDTO());
         return AllScoreDTO;
     }
 
     private Object getScoreResumeDTO() {
         Map<String,Object> scoreResume = new LinkedHashMap<>();
-        long totalWon = this.getWonGames();
-        double totalLost = this.getLostGames();
-        double totalTie = this.getTiedGames();
-        double totalTotal = scores.stream().filter(score ->
-                score.getScore() != -1).mapToDouble(score -> score.getScore()).sum();
-        scoreResume.put("total", totalTotal);
-        scoreResume.put("won", totalWon);
-        scoreResume.put("lost", totalLost);
-        scoreResume.put("tied", totalTie);
+        long acumWon = this.getWonGames();
+        double acumLost = this.getLostGames();
+        double acumTie = this.getTiedGames();
+        double acumScore = scores.stream().filter(score -> score.getScore() != -1).mapToDouble(Score::getScore).sum();
+
+        scoreResume.put("total", acumScore);
+        scoreResume.put("won", acumWon);
+        scoreResume.put("lost", acumLost);
+        scoreResume.put("tied", acumTie);
         return scoreResume;
     }
 }

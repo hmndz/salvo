@@ -22,7 +22,6 @@ public class Ship {
 
     public Ship( ) {    }
 
-
     public GamePlayer getGamePlayer() {
         return this.gamePlayer;
     }

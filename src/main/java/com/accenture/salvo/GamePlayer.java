@@ -29,7 +29,7 @@ public class GamePlayer {
     @OneToMany(mappedBy = "gamePlayer", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Set<Ship> ships = new HashSet<>();
 
-    @OneToMany(mappedBy = "gamePlayer", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "gamePlayer", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Set<Salvo> salvos = new HashSet<>();
 
     public GamePlayer() {
@@ -55,8 +55,9 @@ public class GamePlayer {
         return this.ships;
     }
 
-    public void addShip(Ship ship) {
-        this.ships.add(ship);
+    public void addShip(List<Ship> ships) {
+        ships.forEach(ship -> this.ships.add(new Ship(ship.getShipType(), this,
+                ship.getShipLocations())));
     }
 
     public void addSalvos(Salvo salvo) {
@@ -108,8 +109,15 @@ public class GamePlayer {
         gamePlayerDTO.put("gamePlayers", this.game.getGamePlayersDTO());
         gamePlayerDTO.put("ships", this.getGPlayerShipsDTO());
         gamePlayerDTO.put("salvos", this.game.getGameSalvosDTO());
+        gamePlayerDTO.put("hits", this.game.getHitsDTO());
         return gamePlayerDTO;
     }
+
+
+
+
+
+
 }
 
 

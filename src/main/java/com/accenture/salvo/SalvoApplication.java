@@ -220,15 +220,15 @@ public class SalvoApplication {
                 Score score7 = scoreRepository.save(new Score(0.5, game4, cObrian));
                 Score score8 = scoreRepository.save(new Score(0.5, game4, jBauer));
 
-                Score score9 = scoreRepository.save(new Score(-1, game5, tAlmeida));
-                Score score10 = scoreRepository.save(new Score(-1, game5, jBauer));
+                Score score9 = scoreRepository.save(new Score(null, game5, tAlmeida));
+                Score score10 = scoreRepository.save(new Score(null, game5, jBauer));
 
-                Score score11 = scoreRepository.save(new Score(-1, game6, kBauer));
+                Score score11 = scoreRepository.save(new Score(null, game6, kBauer));
 
-                Score score12 = scoreRepository.save(new Score(-1, game7, tAlmeida));
+                Score score12 = scoreRepository.save(new Score(null, game7, tAlmeida));
 
-                Score score13 = scoreRepository.save(new Score(-1, game8, kBauer));
-                Score score14 = scoreRepository.save(new Score(-1, game8, tAlmeida));
+                Score score13 = scoreRepository.save(new Score(null, game8, kBauer));
+                Score score14 = scoreRepository.save(new Score(null, game8, tAlmeida));
 
             };
 

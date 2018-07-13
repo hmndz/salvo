@@ -74,4 +74,17 @@ public class Game {
         return gameDTO;
     }
 
+    public Map<String,Object> getHitsDTO () {
+        Map<String,Object> hitsDto = new LinkedHashMap<>();
+
+        if (this.gamePlayers.size() !=2 ) {
+            hitsDto.put("self", new ArrayList<>());
+            hitsDto.put("opponent", new ArrayList<>());
+            return hitsDto;
+        }
+        return hitsDto;
+
+    }
+
+
 }

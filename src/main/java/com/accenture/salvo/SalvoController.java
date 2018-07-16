@@ -33,23 +33,28 @@ public class SalvoController {
 
 
     @RequestMapping("/game_view/{id}")
-    public Object getGameById(@PathVariable("id") Long gamePlayerID) {
-        long authPlayerId = this.getAuthPlayer().getId();
+    public Object getGameById (@PathVariable("id") Long gamePlayerID) {
+        Player authPlayer = this.getAuthPlayer();
         GamePlayer gamePlayer = gamePlayerRepository.findOne(gamePlayerID);
-
-        if (gamePlayer.getPlayer().getId() == authPlayerId) {
-            return gamePlayer.getGamePlayerViewDTO();
-        } else {
+        if (authPlayer == null) {
             return new ResponseEntity<>(this.getMapDTO("error", "UNAUTHORIZED"), HttpStatus.UNAUTHORIZED);
         }
+       long authPlayerId = authPlayer.getId();
+        if (gamePlayer.getPlayer().getId() == authPlayerId){
+            gamePlayerRepository.save(gamePlayer);
+            return gamePlayer.getGamePlayerViewDTO();
+        } else {
+            return new ResponseEntity<>(this.getMapDTO("error", "Already logged in"), HttpStatus.UNAUTHORIZED);
+        }
     }
+
+
 
     @RequestMapping(path = "/games", method = RequestMethod.GET)
     public Object getGameIds() {
         Map<String, Object> gamesDTO = new LinkedHashMap<>();
         List<Game> games = gameRepository.findAll();
         Player player = this.getAuthPlayer();
-
         if (player == null) {
             gamesDTO.put("player", "Guest");
         } else {
@@ -97,7 +102,7 @@ public class SalvoController {
 //Joining a game
 
     @RequestMapping(path = "/game/{id}/players", method = RequestMethod.POST)
-    public Object joinGame(@PathVariable("id") Long gameId) {
+    public Object joinGame(@PathVariable("id") long gameId) {
         Player player = this.getAuthPlayer();
         if (player == null) {
             return new ResponseEntity<>(this.getMapDTO("error", "Login first good Sir"), HttpStatus.UNAUTHORIZED);
@@ -106,19 +111,17 @@ public class SalvoController {
         if (game == null) {
             return new ResponseEntity<>(this.getMapDTO("error", "Invalid gameId"), HttpStatus.FORBIDDEN);
         }
-        if (game.getGameDTO().size() == 2) {
+        if (game.countGamePlayers() == 2) {
             return new ResponseEntity<>(this.getMapDTO("error", "Game is Full"), HttpStatus.FORBIDDEN);
         }
         GamePlayer gamePlayer = new GamePlayer(player, game);
         gamePlayerRepository.save(gamePlayer);
         return new ResponseEntity<>(this.getMapDTO("gp", gamePlayer.getId()), HttpStatus.CREATED);
-
     }
 
 // Getting Ships
 
-    @RequestMapping(path = "/games/players/{gamePlayerID}/ships",
-            method = RequestMethod.GET)
+    @RequestMapping(path = "/games/players/{gamePlayerID}/ships", method = RequestMethod.GET)
     public Object getShip(@PathVariable("gamePlayerID") long gamePlayerID) {
         Map<String, Object> playerShips = new LinkedHashMap<>();
         GamePlayer gamePlayer = gamePlayerRepository.findOne(gamePlayerID);
@@ -136,8 +139,7 @@ public class SalvoController {
 
 // Setting Ships
 
-    @RequestMapping(path = "/games/players/{gamePlayerID}/ships",
-            method = RequestMethod.POST)
+    @RequestMapping(path = "/games/players/{gamePlayerID}/ships", method = RequestMethod.POST)
     public Object setShipsLocations (@PathVariable("gamePlayerID") long gamePlayerID,
                                      @RequestBody List<Ship> ships) {
         Player authPlayer = getAuthPlayer();
@@ -232,6 +234,7 @@ public class SalvoController {
         if (gamePlayer.getSalvos().isEmpty()) {
             return true;
         }
-        return (salvo.getTurn() == gamePlayer.getSalvos().size() + 1)&(!gamePlayer.notPermittedSalvo(salvo.getSalvoLocations()));
+        return (salvo.getTurn() ==
+                gamePlayer.getSalvos().size() + 1)&(!gamePlayer.notPermittedSalvo(salvo.getSalvoLocations()));
     }
 }

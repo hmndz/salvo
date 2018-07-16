@@ -63,7 +63,7 @@ public class Salvo {
         Map<String, Object> salvoList = new LinkedHashMap<>();
         salvoList.put("turn", this.turn);
         salvoList.put("player", this.gamePlayer.getPlayer().getId());
-        salvoList.put("salvoLocations", this.salvoLocations);
+        salvoList.put("locations", this.salvoLocations);
         return salvoList;
     }
 

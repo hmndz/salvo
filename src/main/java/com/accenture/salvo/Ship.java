@@ -50,9 +50,21 @@ public class Ship {
 
     public Map<String, Object> getShipDTO(){
         Map<String, Object> shipDTO = new LinkedHashMap<>();
-        shipDTO.put("shipType", this.shipType);
-        shipDTO.put("shipLocations", this.shipLocations);
+        shipDTO.put("type", this.shipType);
+        shipDTO.put("locations", this.shipLocations);
         return shipDTO;
+    }
+
+    public boolean shipPieceHit(String location) {
+        return this.shipLocations.stream().anyMatch(shipLocation -> shipLocation == location);
+    }
+
+    public String getShipTypeString() {
+        if (this.shipType == ShipType.patrolboat) {
+            return "patrolboat";
+        } else {
+            return this.shipType.name();
+        }
     }
 
 }

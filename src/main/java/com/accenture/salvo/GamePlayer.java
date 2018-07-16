@@ -17,6 +17,7 @@ public class GamePlayer {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private Date joinDate;
+    private GameState gameState;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "player_id")
@@ -33,6 +34,14 @@ public class GamePlayer {
     private Set<Salvo> salvos = new HashSet<>();
 
     public GamePlayer() {
+    }
+
+    public GameState getGameState() {
+        return this.gameState;
+    }
+
+    public void setGameState(GameState gameState) {
+        this.gameState = gameState;
     }
 
     public Player getPlayer() {
@@ -91,6 +100,7 @@ public class GamePlayer {
         this.player = player;
         this.game = game;
         this.joinDate = new Date();
+        this.gameState = GameState.PLACESHIPS;
     }
 
     @JsonIgnore
@@ -106,16 +116,13 @@ public class GamePlayer {
         Map<String, Object> gamePlayerDTO = new LinkedHashMap<>();
         gamePlayerDTO.put("id", this.game.getId());
         gamePlayerDTO.put("created", this.game.getCreationDate());
+        gamePlayerDTO.put("gameState", "PLAY");
         gamePlayerDTO.put("gamePlayers", this.game.getGamePlayersDTO());
         gamePlayerDTO.put("ships", this.getGPlayerShipsDTO());
-        gamePlayerDTO.put("salvos", this.game.getGameSalvosDTO());
-        gamePlayerDTO.put("hits", this.game.getHitsDTO());
+        gamePlayerDTO.put("salvoes", this.game.getGameSalvosDTO());
+        gamePlayerDTO.put("hits", this.game.getHitsDTO(this.id));
         return gamePlayerDTO;
     }
-
-
-
-
 
 
 }

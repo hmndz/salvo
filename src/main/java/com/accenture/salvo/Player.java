@@ -103,7 +103,7 @@ public class Player {
 
     private Object getScoreResumeDTO() {
         Map<String,Object> scoreResume = new LinkedHashMap<>();
-        long acumWon = this.getWonGames();
+        long   acumWon = this.getWonGames();
         double acumLost = this.getLostGames();
         double acumTie = this.getTiedGames();
         double acumScore = scores.stream().filter(score -> score.getScore() != -1).mapToDouble(Score::getScore).sum();

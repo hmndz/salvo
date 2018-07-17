@@ -41,6 +41,8 @@ public class SalvoController {
         }
        long authPlayerId = authPlayer.getId();
         if (gamePlayer.getPlayer().getId() == authPlayerId){
+
+            gamePlayer.updateGameState();
             gamePlayerRepository.save(gamePlayer);
             return gamePlayer.getGamePlayerViewDTO();
         } else {
@@ -132,6 +134,8 @@ public class SalvoController {
         if (gamePlayer == null) {
             return this.createRespEntity("error", "Information not found", HttpStatus.NOT_FOUND);
         }
+
+        gamePlayer.updateGameState();
         playerShips.put("ships", gamePlayer.getGPlayerShipsDTO());
         playerShips.put("gp", gamePlayer.getId());
         return playerShips;
@@ -155,6 +159,7 @@ public class SalvoController {
         }
         if (gamePlayer.withOutShips()) {
             gamePlayer.addShip(ships);
+            gamePlayer.updateGameState();
             gamePlayerRepository.save(gamePlayer);
             return this.createRespEntity("message", "Ships Added", HttpStatus.CREATED);
         } else {
@@ -177,6 +182,7 @@ public class SalvoController {
         }
         playerSalvos.put("gp", selectedGamePlayer.getId());
         playerSalvos.put("salvoes", selectedGamePlayer.getSalvosDTO());
+        selectedGamePlayer.updateGameState();
         return playerSalvos;
     }
 
@@ -197,8 +203,8 @@ public class SalvoController {
                 gamePlayer, salvos.getSalvoLocations());
 
         if (this.permittedSalvo(gamePlayer, newSalvo)) {
+            gamePlayer.updateGameState();
             gamePlayer.addSalvos(newSalvo);
-            salvoRepository.save(newSalvo);
             gamePlayerRepository.save(gamePlayer);
             return this.createRespEntity("Notification", "Salvos Added", HttpStatus.CREATED);
         } else {

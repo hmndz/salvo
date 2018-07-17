@@ -65,13 +65,27 @@ public class GamePlayer {
     }
 
     public void addShip(List<Ship> ships) {
-        ships.forEach(ship -> this.ships.add(new Ship(ship.getShipType(), this,
-                ship.getShipLocations())));
+        ships.forEach(ship -> {
+            ship.setGamePlayer(this);
+            this.ships.add(ship);
+        });
     }
 
     public void addSalvos(Salvo salvo) {
+        salvo.setGamePlayer(this);
         this.salvos.add(salvo);
     }
+
+    public void updateGameState(){
+
+        if (this.gameState == GameState.PLACESHIPS && !this.ships.isEmpty()) {
+            this.gameState = GameState.WAIT;
+        }
+        if (this.gameState != GameState.PLACESHIPS) {
+            this.gameState = GameState.PLAY;
+            }
+        }
+
 
     public boolean withOutShips() {
         return this.ships.isEmpty();
@@ -116,13 +130,15 @@ public class GamePlayer {
         Map<String, Object> gamePlayerDTO = new LinkedHashMap<>();
         gamePlayerDTO.put("id", this.game.getId());
         gamePlayerDTO.put("created", this.game.getCreationDate());
-        gamePlayerDTO.put("gameState", "PLAY");
+        gamePlayerDTO.put("gameState", gameState);
         gamePlayerDTO.put("gamePlayers", this.game.getGamePlayersDTO());
         gamePlayerDTO.put("ships", this.getGPlayerShipsDTO());
         gamePlayerDTO.put("salvoes", this.game.getGameSalvosDTO());
         gamePlayerDTO.put("hits", this.game.getHitsDTO(this.id));
         return gamePlayerDTO;
     }
+
+
 
 
 }

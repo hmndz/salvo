@@ -14,8 +14,8 @@ public class Game {
     private long id;
     private final Date creationDate;
 
-    @OneToMany(mappedBy = "game", fetch = FetchType.EAGER)
-    private Set<GamePlayer> gamePlayers = new HashSet<>();
+    @OneToMany(mappedBy = "game", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private Set<GamePlayer> gamePlayers = new LinkedHashSet<>();
 
     @OneToMany(mappedBy = "game", fetch = FetchType.EAGER)
     private Set<Score> scores = new HashSet<>();
@@ -120,7 +120,7 @@ public class Game {
             Map<String, Object> processedTurnDTO = new LinkedHashMap<>();
             processedTurnDTO.put("turn", salvo.getTurn());
             processedTurnDTO.put("hitLocations", salvo.getSalvoLocations());
-            process(salvo.getSalvoLocations(), defender.getShips(), shipsStatusMap);
+            processDefenders(salvo.getSalvoLocations(), defender.getShips(), shipsStatusMap);
             processedTurnDTO.put("damages", new LinkedHashMap<>(shipsStatusMap));
             processedTurnDTO.put("missed", countMissShots(salvo.getSalvoLocations().size(),shipsStatusMap));
             processedSalvosDTO.add(processedTurnDTO);
@@ -171,7 +171,7 @@ public class Game {
         });
     }
 
-    private void process(List<String> salvoLocations, Set<Ship> ships,  Map<String,Integer> shipsStatusMap) {
+    private void processDefenders (List<String> salvoLocations, Set<Ship> ships,  Map<String,Integer> shipsStatusMap) {
         salvoLocations.stream().forEach(salvoLocation -> checkShipHit(salvoLocation, ships, shipsStatusMap));
     }
 
